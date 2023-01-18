@@ -1,0 +1,715 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  /* Dark Mode */
+
+  --light-green: rgb(6, 43, 50);
+  --dark-green: rgb(5, 42, 47);
+  --white: #f1f1f1;
+  --grey: rgb(130, 122, 122);
+
+  /*  Light Mode */
+  --black: #2b2b2b;
+  --white: #f1f1f1;
+  --orange: rgb(255, 171, 16);
+}
+
+ html{
+  height: 100vh;
+}
+
+.dark-mode {
+  background-color: var(--light-green);
+  color: var(--white);
+  height: 100%;
+  transition: background-color 0.30s ease-in-out;
+}
+
+.light-mode {
+  /* background-color: #303030; */
+  background-color: var(--white);
+  color: var(--black);
+  height: 100%;
+  transition: background-color 0.30s ease-in-out;
+}
+
+/* ====================================================== SideMenu */
+
+
+.menuContainer {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .links{
+    display: flex;
+  }
+
+  .linksMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    align-items: flex-start;
+    background-color: rgba(29, 29, 29, 0.918);
+    color: var(--white);
+    height: 100vh;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transition: all ease-in-out .2s;
+    transform: translateX(40vw);
+  }
+
+  .extraBtns{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin: 1rem -1rem 0rem;
+  }
+
+  .dkBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .link{
+    text-decoration: none;
+    font-size: 22px;
+    margin: 0rem 1rem;
+    font-weight: bold;
+    color: var(--black);
+  }
+
+  .darkLink{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 22px;
+    margin: 0rem 1rem;
+    font-weight: bold;
+  }
+
+  
+  .toggler{
+    display: flex;
+    gap: 5px;
+  }
+  
+
+  /* =========================================================================== Responsive menu */
+
+  .nav-btn{
+    visibility: hidden;
+    opacity: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+ }
+ 
+ @media only screen and (max-width: 1024px){
+  .nav-btn{
+     visibility: visible;
+     opacity: 1;
+   }
+ 
+  nav{
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* transition: 1s; */
+     transform: translateX(100vw);
+   }
+  }   
+
+
+
+
+  /* =============================================== HOME ================================================================ */
+
+  .homeContainer{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+  }
+
+  .homeInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .homeTitle{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .homeUserForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .homeForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: .5rem;
+    padding: 1rem;
+    margin-top: 3rem;
+    width: 80%;
+  }
+
+  .log{
+    text-align: center;
+  }
+
+  .homeInp{
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      padding: .5rem .3rem;
+      border: none;
+      border-radius: .3rem;
+      /* box-shadow: 0px 0px 13px 2px greenyellow; */
+  }
+  .darkHomeInp{
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      padding: .5rem .3rem;
+      border: none;
+      border-radius: .3rem;
+  }
+
+  .homeBtn{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: .5rem .3rem;
+    border: none;
+    border-radius: .3rem;
+    background-color: var(--orange);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.315);
+  }
+  
+  .darkHomeBtn{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: .5rem .3rem;
+    border: none;
+    border-radius: .3rem;
+    background-color: var(--orange);
+    box-shadow: 3px 3px 10px 1px rgb(153, 205, 50);
+  }
+
+  /* =============================================== Locations ===========================================================*/
+  
+  .locationsContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .locBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .locInputs{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 1rem;
+  }
+
+  .locInput{
+    padding: .3rem 1.5rem;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: .3rem;
+      box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.315);
+  }
+
+  .darkLocInput{
+      padding: .3rem 1.5rem;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: .3rem;
+      box-shadow: 1px 1px 9px 1px rgba(153, 205, 50, 0.603);
+  }
+
+
+  .locBtns{
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  .locBtn{
+    padding: 0.5rem;
+    border: none;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-size: 19px;
+    background-color: var(--orange);
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.315);
+  }
+
+  .darkLocBtn{
+    padding: 0.5rem;
+    border: none;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-size: 19px;
+    background-color: var(--orange);
+    color: var(--white);
+    box-shadow: 3px 3px 5px 1px rgba(153, 205, 50, 0.603);
+  }
+
+  .listContainer{
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .locList{
+    list-style: none;
+  }
+
+  .locListRslt{
+    text-decoration: none;
+    color: var(--black);
+  }
+
+  .darkLocListRslt{
+    text-decoration: none;
+    color: var(--white);
+  }
+
+
+
+  .locIdSrch{
+    height: 100vh;
+    padding-top: 5rem;
+  }
+
+  .locIdInp{
+    padding: .3rem .5rem;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: .3rem;
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.315);
+  }
+  
+  .locBtnRtn{
+    padding: 0.5rem;
+    margin:.5rem 0rem 2rem ;
+    border: none;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-size: 19px;
+    height: 2.3rem;
+    position: relative;
+    top: 4px;
+    background-color: var(--orange);
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.315); 
+    margin-left: .3rem;
+  }
+
+  .darkLocIdInp{
+    padding: .3rem .5rem;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: .3rem;
+    box-shadow: 3px 3px 5px 1px rgba(153, 205, 50, 0.603);
+  }
+  
+  .darkLocBtnRtn{
+    padding: 0.5rem;
+    margin:.5rem 0rem 2rem ;
+    border: none;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-size: 19px;
+    height: 2.3rem;
+    position: relative;
+    top: 4px;
+    background-color: var(--orange);
+    box-shadow: 3px 3px 5px 1px rgba(153, 205, 50, 0.603);
+    margin-left: .3rem;
+  }
+
+  .locRslt{
+    text-align: center;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .darkLocRslt{
+    text-align: center;
+    color: var(--white);
+    text-decoration: none;
+  }
+ 
+  /* ================================================ Locations info ======================================================*/
+
+  .locationInfoContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .locInfoTitle{
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  .lIdata{
+    color: var(--grey);
+    font-weight:normal ;
+  }
+
+  .darkLIData{
+    color: var(--grey);
+    font-weight:normal ;
+  }
+
+  .locInfoBtns{
+    display: flex;
+    gap: .5rem;
+  }
+
+  .locInfoBtn{
+    padding: 0.5rem;
+    border: none;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-size: 13px;
+    height: 2.3rem;
+    position: relative;
+    top: 4px;
+    background-color: var(--orange);
+    box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.315);
+  }
+  
+  .darkLocInfoBtn{
+    padding: 0.5rem;
+    border: none;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-size: 15px;
+    height: 2.3rem;
+    position: relative;
+    top: 4px;
+    color: var(--black);
+    background-color: var(--orange);
+    box-shadow: 1px 1px 9px 1px rgba(153, 205, 50, 0.603);
+  }
+
+  .locInfoInp{
+    text-align: center;
+    height: 2.4rem;
+    position: relative;
+    top: .2rem;
+    width: 3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: .2rem;
+    border-radius: .3rem;
+    box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.315);
+  }
+
+  .darkLocInfoInp{
+    text-align: center;
+    height: 2.4rem;
+    position: relative;
+    top: .2rem;
+    width: 3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: .2rem;
+    /* box-shadow: 3px 3px 5px 1px rgba(255, 255, 255, 0.315); */
+  }
+
+  .locInfoPgsBtns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    margin-bottom: 1rem;
+  }
+
+  .pagesBtns{
+    padding: 0.5rem;
+    border: none;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-size: 15px;
+    height: 2.3rem;
+    position: relative;
+    top: 4px;
+    margin: 0rem .4rem 0rem;
+    background-color: var(--orange);
+  }
+  
+  .darkPagesBtns{
+    padding: 0.5rem;
+    border: none;
+    border-radius: .2rem;
+    font-weight: bold;
+    font-size: 15px;
+    height: 2.3rem;
+    position: relative;
+    top: 4px;
+    margin: 0rem .4rem 0rem;
+    /* background-color: var(--orange); */
+    /* box-shadow: 1px 1px 9px 1px orange; */
+  }
+
+  .pagesBtn{
+    padding: 0.2rem;
+    border: none;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 15px;
+    height: 2rem;
+    position: relative;
+    top: 4px;
+    margin: 0rem .2rem 0rem ;
+    box-shadow: 0px 0px 3px 1px rgb(0, 0, 0);
+  }
+
+  .darkPagesBtn{
+    padding: 0.2rem;
+    border: none;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 15px;
+    height: 2rem;
+    position: relative;
+    top: 4px;
+    margin: 0rem .2rem 0rem;
+    box-shadow: 0px 0px 3px 3px rgb(153, 205, 50);
+  }
+
+  .locInfChaCardContainer{
+    
+  }
+
+  .locInfChaCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .locInfCardImg{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+  }
+
+  .locInfCardNme{
+    color: var(--black);
+  }
+
+  .darkLocInfCardNme{
+    color: var(--white);
+  }
+
+/* ================================================== Character =========================================================== */
+
+  .characterContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .characterBtns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+    padding: .2rem;
+    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .characterBtn{ 
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: .5rem .3rem;
+    border: none;
+    border-radius: .3rem;
+    background-color: var(--orange);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.315); 
+  }
+  .darkCharacterBtn{ 
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: .5rem .3rem;
+    border: none;
+    border-radius: .3rem;
+    background-color: var(--orange);
+    box-shadow: 0px 0px 3px 3px rgb(153, 205, 50); 
+  }
+
+/* ------------------------- Filters */
+
+.nameIdInp{
+  padding: .3rem .5rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: .3rem;
+  margin-bottom: -.5rem;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.315);
+}
+
+.nameIdBtn{
+  padding: 0.5rem;
+  margin:.5rem 0rem 2rem ;
+  border: none;
+  border-radius: .2rem;
+  font-weight: bold;
+  font-size: 19px;
+  height: 2.3rem;
+  position: relative;
+  top: 4px;
+  background-color: var(--orange);
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.315); 
+  margin-left: .3rem;
+}
+
+.darkNameIdInp{
+  padding: .3rem .5rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: .3rem;
+  margin-bottom: -.5rem;
+  box-shadow: 3px 3px 5px 1px rgba(153, 205, 50, 0.603);
+}
+
+.darkNameIdBtn{
+  padding: 0.5rem;
+  margin:.5rem 0rem 2rem ;
+  border: none;
+  border-radius: .2rem;
+  font-weight: bold;
+  font-size: 19px;
+  height: 2.3rem;
+  position: relative;
+  top: 4px;
+  background-color: var(--orange);
+  box-shadow: 3px 3px 5px 1px rgba(153, 205, 50, 0.603);
+  margin-left: .3rem;
+}
+
+
+
+.NameIdBtnsCont{
+  display: flex;
+}
+
+.NIPage{
+  margin: 1rem 1rem 0rem 1rem;
+}
+
+.darkNINameSearchBtn{
+  padding: 0.5rem;
+  margin:.5rem 0rem 2rem ;
+  border: none;
+  border-radius: .2rem;
+  font-weight: bold;
+  font-size: 19px;
+  height: 2.3rem;
+  position: relative;
+  top: 4px;
+  background-color: var(--orange);
+  box-shadow: 3px 3px 5px 1px rgba(153, 205, 50, 0.603);
+  margin-left: .3rem;
+}
+
+.nINameSearchBtn{
+  padding: 0.5rem;
+  margin:.5rem 0rem 2rem ;
+  border: none;
+  border-radius: .2rem;
+  font-weight: bold;
+  font-size: 19px;
+  height: 2.3rem;
+  position: relative;
+  top: 4px;
+  background-color: var(--orange);
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.315); 
+  margin-left: .3rem;
+}
+
+.nICharacterList{
+  text-decoration: none;
+}
+
+.nICharacterName{
+  text-align: center; 
+  color: var(--black);
+}
+
+.darkNICharacterName{
+  text-align: center;
+  color: var(--white);
+}
+
+
+  /* ================================================ Character Info ====================================================== */
+
+  .characterInfoContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
