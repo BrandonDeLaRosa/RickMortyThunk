@@ -18,12 +18,12 @@ const Home = ({darkMode}) => {
     }
 
     return (
-        <div className='homeContainer'>
+        <div className='homeContainer' id='home'>
                 <div className='homeInfo'>
                     <h1 className='homeTitle'>Home Page</h1>
-                    <h2>Welcome To Rick and Morty´s App.</h2>
+                    <h2 className='homeTitle2'>Welcome To Rick and Morty´s App.</h2>
 
-                    <h3>Here you can search over 826 characters and their specific information.
+                    <h3 className='homeTitle3'>Here you can search over 826 characters and their specific information.
                         As well explore the 126 diferent locations, have fun.
                         </h3>
 

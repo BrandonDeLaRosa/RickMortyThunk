@@ -137,12 +137,11 @@
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 25px;
   }
   
   .link{
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     margin: 0rem 1rem;
     font-weight: bold;
     color: var(--black);
@@ -151,21 +150,9 @@
   .darkLink{
     color: var(--white);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     margin: 0rem 1rem;
     font-weight: bold;
-  }
-  
-  .link:hover{
-    color: var(--orange);
-    transition: .4s;
-    transform: scale(1.1)
-  }
-
-  .darkLink:hover{
-    transition: .4s;
-    transform: scale(1.1);
-    color: var(--orange);
   }
 
   
@@ -173,15 +160,7 @@
     display: flex;
     gap: 5px;
   }
- 
-  .fa-regular{
-    margin-left: 1rem;
-    -webkit-transition: -webkit-transform 1s;
-  }
-
-  .fa-regular:hover {
-    -webkit-transform: rotate(370deg) translateZ(0);
-  }
+  
 
   /* =========================================================================== Responsive menu */
 
@@ -198,7 +177,7 @@
      visibility: visible;
      opacity: 1;
    }
-
+ 
   nav{
      position: fixed;
      top: 0;
@@ -235,8 +214,8 @@
   align-items: center;
   width: 50%;
   position: relative;
-  top:16rem;
-  padding:  10px;
+  top: -18rem;
+  padding: 10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
@@ -334,8 +313,8 @@
   align-items: center;
   width: 9rem;
   position: relative;
-  top: -16rem;
-  left: 0rem;
+  top: -22.5rem;
+  left: -3.3rem;
   padding: 10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -344,12 +323,12 @@
 .darkCharacterStatus3{
   background-color: var(--light-green) ;
   height: 1.7rem;
+  width: 9rem;
   display: flex;
   align-items: center;
-  width: 9rem;
   position: relative;
-  top: -16.5rem;
-  left: 0rem;
+  top: -22.5rem;
+  left: -3.3rem;
   padding: 10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -372,6 +351,7 @@
 
 
   /* =============================================== HOME ================================================================ */
+
   .homeContainer{
     display: flex;
     flex-direction: column;
@@ -1010,10 +990,6 @@
   color: var(--white);
 }
 
-.filtersImgs{
-  border-radius: 1rem;
-  margin-top: 1rem;
-}
 
   /* ================================================ Character Info ====================================================== */
 
@@ -1055,3 +1031,6 @@
     justify-content: center;
     align-items: center;
   }
+
+
+

@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { setIsLoading } from './loading.slice';
 
 export const characterInfoSlice = createSlice({
     name: 'characterInfo',
@@ -12,11 +13,11 @@ export const characterInfoSlice = createSlice({
 })
 
 export const getCharacterInfo = (id) => (dispatch) => {
-    // dispatch(setIsLoading(true));
+    dispatch(setIsLoading(true));
     return axios.get(`https://rickandmortyapi.com/api/character/${id}`)
         .then((res) => dispatch(setCharacterinfo(res.data)))
         .catch(error => console.log(error.response))
-        // .finally(() => dispatch(setIsLoading(false)));
+        .finally(() => dispatch(setIsLoading(false)));
 }
 
 export const { setCharacterinfo } = characterInfoSlice.actions;

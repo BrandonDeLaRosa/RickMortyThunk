@@ -1,0 +1,480 @@
+@media screen and (min-width: 1950px){
+  /* ====================================================== SideMenu */
+
+.menuContainer {
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.links{
+  display: flex;
+}
+
+.dkBtn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 40px;
+}
+
+.link{
+  font-size: 40px;
+  margin: 0rem 2rem;
+
+}
+
+.darkLink{
+  font-size: 40px;
+  margin: 0rem 2rem;
+
+}
+
+.fa-regular{
+  margin-left: 1rem;
+  -webkit-transition: -webkit-transform 1s;
+}
+
+.fa-regular:hover {
+  -webkit-transform: rotate(370deg) translateZ(0);
+}
+
+    /* =============================================== HOME ================================================================ */
+    
+      .homeInfo{
+        padding: 4rem;
+      }
+    
+      .homeTitle{
+        text-align: center;
+        font-size: 70px;
+        margin-bottom:  4rem;
+      }
+      
+      .homeTitle2{
+        font-size: 60px;
+        margin-bottom: 4rem;
+      }
+    
+      .homeTitle3{
+        font-size: 55px;
+      }
+    
+      .homeForm{
+        gap: 1.5rem;
+        padding: 1rem;
+        width: 50%;
+      }
+    
+      .log{
+        font-size: 50px;
+      }
+    
+      .homeInp{
+          font-size: 40px;
+      }
+    
+      .darkHomeInp{
+          font-size: 40px;
+      }
+    
+    
+  .homeInp:focus{
+    box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+    
+  .darkHomeInp:focus{
+  box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+    
+      .homeBtn{
+        font-size: 40px;
+      }
+      
+      .darkHomeBtn{
+        font-size: 40px;
+      }
+    
+      .homeBtn:hover{
+        box-shadow: 0px 0px 13px 5px yellowgreen;;
+      }
+      
+      .darkHomeBtn:hover{
+        box-shadow: 0px 0px 3px 5px yellowgreen;
+      }
+    
+    
+    /* =============================================== Locations ===========================================================*/
+      
+    .locationsContainer{
+        padding: 5rem; 
+        height: 100%;
+        justify-content: flex-start;
+       }
+       
+      .locTitle1{
+        font-size: 60px;
+      }
+      .locTitle2{
+        font-size: 50px;
+        margin-bottom: 1rem;
+      }
+
+      .locIdInp{
+        font-size: 45px;
+      }
+      .darkLocIdInp{
+        font-size: 45px;
+      }
+
+      .locIdInp:focus{
+        box-shadow: 0px 0px 13px 5px var(--orange);
+      }
+      .darkLocIdInp:focus{
+        box-shadow: 0px 0px 13px 5px var(--orange);
+      }
+    
+      .locBtnRtn{
+        font-size: 45px;
+        height: 4.8rem;
+        margin-left: .5rem;
+      }
+      .darkLocBtnRtn{
+        font-size: 45px;
+        height: 4.8rem;
+        margin-left: .5rem;
+      }
+
+
+      .locBtnRtn:hover{
+        box-shadow: 0px 0px 13px 5px yellowgreen;
+      }
+      .darkLocBtnRtn:hover{
+        box-shadow: 0px 0px 13px 5px yellowgreen;
+      }
+
+      .locIdRslt{
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .locIdRslt:hover{
+        transition: .4s;
+        transform: scale(1.1);
+        color: var(--orange);
+      }
+
+       .locBody{
+         width: 100%;
+       }
+     
+       .locInputs{
+         width: 60%;
+         margin-bottom: 2rem;
+         gap: 2rem;
+       }
+     
+       .locInput{
+           font-size: 40px;
+           height: 5rem;
+       }
+     
+       .darkLocInput{
+           font-size: 40px;
+           height: 5rem;
+       }
+       .locInput:focus{
+         box-shadow: 0px 0px 13px 5px var(--orange);
+       }
+     
+       .darkLocInput:focus{
+        box-shadow: 0px 0px 13px 5px var(--orange);
+       }
+     
+       .locBtns{
+         gap: 10rem;
+         margin-bottom: 1rem;
+       }
+     
+       .locBtn{
+         font-size: 35px;
+         width: 15rem;
+       }
+     
+       .darkLocBtn{
+         font-size: 35px;
+         width: 15rem;
+       }
+
+       .locBtn:hover{
+        box-shadow: 0px 0px 13px 5px yellowgreen;;
+       }
+     
+       .darkLocBtn:hover{
+        box-shadow: 0px 0px 13px 5px yellowgreen;;            
+       }
+
+       .locPageNum{
+        font-size: 50px;
+       }
+     
+      .listContainer{
+        /* padding: 0rem 0rem 3rem 26rem; */
+        padding: 0rem 0rem 3rem 0rem;
+        margin-left: 15rem;
+      }
+       
+      .locListResult1{
+         font-size: 40px;
+         font-weight: bold;
+         transition: transform .2s;
+         padding: .5rem;
+      }
+
+      .locListResult1:hover{
+        color: var(--orange);
+        transition: .4s;
+        transform: translateX(3%);
+      }
+
+    
+      .locationInfoContainer{
+        padding-bottom: 5rem;
+      }
+    
+    
+      .locInfoBtns{
+        display: flex;
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+    
+      .locInfoBtn{
+        font-size: 20px;
+        height: 3rem;
+        width: 15rem;
+      }
+      
+      .darkLocInfoBtn{
+        font-size: 20px;
+        height: 3rem;
+        width: 15rem;
+      }
+    
+      .locInfoInp{
+        height: 3rem;
+        width: 4rem;
+        font-size: 20px;
+      }
+    
+      .darkLocInfoInp{
+        height: 3rem;
+        width: 4rem;
+        font-size: 20px;
+      }
+    
+      .locInfoPgsBtns{
+        margin-bottom: 4rem;
+      }
+    
+      .pagesBtns{
+        font-size: 20px;
+        height: 3rem;
+        width: 6rem;
+        margin: 1rem 1rem 0rem;
+     
+      }
+      
+      .darkPagesBtns{
+        font-size: 20px;
+        height: 3rem;
+        width: 6rem;
+        margin: 1rem 1rem 0rem;
+      }
+    
+      .pagesBtn{
+        font-size: 18px;
+        height: 2rem;
+        top: .8rem;
+        margin: 0rem .3rem 0rem ;
+      }
+    
+      .darkPagesBtn{
+        font-size: 18px;
+        height: 2rem;
+        top: .8rem;
+        margin: 0rem .3rem 0rem ;
+      }
+    
+      .locInfList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+      }
+    
+      .locInfCardImg{
+        width: 15rem;
+        height: 15rem;
+      }
+    
+      /* ================================================== Character =========================================================== */
+    
+      .characterContainer{
+        padding-top: 9rem;
+      }
+    
+      .charactersTitle1{
+        font-size: 50px;
+      }
+      .charactersTitle2{
+        font-size: 45px;
+      }
+    
+      .charactersNameFilter{
+        font-size: 40px;
+      }
+      .darkCharactersNameFilter{
+        font-size: 40px;
+      }
+    
+      .characterBtns2{
+        gap: 2.5rem;
+        margin-top: 2rem;
+      }
+      .characterBtns2-bg{
+        gap: 2.5rem;
+    
+      }
+      .darkCharacterBtns2-bg{
+        gap: 2rem;
+    
+      }
+    
+      .characterBtn{ 
+        font-size: 30px;
+      }
+    
+      .darkCharacterBtn{ 
+        font-size: 30px;
+      }
+    
+    /* ------------------------- Filters */
+    
+    .nameIdInp{
+      font-size: 30px;
+      width: 40rem;
+    }
+    
+    
+    .darkNameIdInp{
+        font-size: 30px;
+        width: 40rem;
+    }
+    
+    .nameIdBtn{
+        font-size: 30px;
+        height: 3.5rem;
+        width: 8rem;
+    }
+    
+    .darkNameIdBtn{
+      font-size: 30px;
+      height: 3.5rem;
+      width: 8rem;
+    }
+    
+    .NameIdBtnsCont{
+        gap: 3rem;
+        margin: 0rem 0rem 1rem 3rem;
+    }
+    
+    .NIPage{
+        font-size: 30px;
+    }
+    
+    .darkNINameSearchBtn{
+      font-size: 30px;
+      height: 4rem;
+      top: 4px;
+      margin-left: .3rem;
+    }
+    
+    .nINameSearchBtn{
+      font-size: 30px;
+      height: 4rem;
+      top: 4px;
+      margin-left: .3rem;
+    }
+    
+    .filtersListContainer{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 2rem;
+    }
+    
+    
+      /* ================================================ Character Info ====================================================== */
+    
+      .lCdata{
+        font-size: 30px;
+      }
+    
+      .darkCIData{
+        font-size: 30px;
+      }
+    
+      .cIText{
+        font-size: 30px;
+      }
+    
+      .characterInfoData{
+        margin-right: 5rem;
+      }
+    
+      .characterInfoImg{
+        height: 390px;
+        width: 390px;
+      }
+    
+      .characInfoBtnsCont{
+        display: flex;
+        position: absolute;
+        top: 28rem;
+        gap: 4rem;
+      }
+    
+      .ipadSize{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 3rem;
+        padding: 1rem;
+      }
+    
+      .statFont3{
+        margin-top: .8rem;
+        font-size: 24px;
+      }
+      .darkStatFont3{
+        margin-top: .8rem;
+        font-size: 18px;
+      }
+    
+      .darkCharacterStatus3{
+        height: 2.2rem;
+        width: 10rem;
+        top: -25rem;
+        left: -.5rem;
+      }
+     
+      .characterStatus3{
+        height: 2.2rem;
+        width: 10rem;
+        top: -25rem;
+        left: -.5rem;
+      }
+    }
+    

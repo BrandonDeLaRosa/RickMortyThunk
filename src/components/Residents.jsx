@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import StatusLocationInfo from './StatusLocationInfo';
 
 const Residents = ({url,darkMode}) => {
 
@@ -19,6 +20,7 @@ const Residents = ({url,darkMode}) => {
                 <img  className='locInfCardImg' src={resident.image} alt="" />
                 <h4 className={darkMode? 'darkLocInfCardNme' : 'locInfCardNme'}>  {resident.name}</h4>
             </Link>
+            <StatusLocationInfo resident={resident} darkMode={darkMode}/>
         </div>
     );
 };

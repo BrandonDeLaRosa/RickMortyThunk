@@ -20,17 +20,17 @@ export const getLocationsThunk = (page) => (dispatch) => {
 }
 
 export const userSearchThunk = (search) => (dispatch) => {
-    // dispatch(setIsLoading(true));
+    dispatch(setIsLoading(true));
     return axios.get(`https://rickandmortyapi.com/api/location?name=${search}`)
         .then((res) => dispatch(setLocations(res.data)))
-        // .finally(() => dispatch(setIsLoading(false)));
+        .finally(() => dispatch(setIsLoading(false)));
 }
 
 export const userIdSearchThunk = (idSearch) => (dispatch) => {
-    // dispatch(setIsLoading(true));
+    dispatch(setIsLoading(true));
     return axios.get(`https://rickandmortyapi.com/api/location/${idSearch}`)
         .then((res) => dispatch(setLocations(res.data)))
-        // .finally(() => dispatch(setIsLoading(false)));
+        .finally(() => dispatch(setIsLoading(false)));
 }
 
 

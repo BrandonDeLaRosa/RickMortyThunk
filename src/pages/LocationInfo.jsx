@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import Loading from '../components/Loading';
 import Residents from '../components/Residents';
 import { getLocationInfoThunk, userIdSearchThunk } from '../store/slices/locationInfo.slice';
 
@@ -9,6 +10,7 @@ const LocationInfo = ({darkMode}) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const { id } = useParams()
+    const loader = useSelector(state => state.loader)
     const  locationInfo = useSelector(state => state.locationInfo)
     const name = useSelector(state => state.name)
     const [idSearch, setIdSearch] = useState("")
@@ -56,6 +58,9 @@ const LocationInfo = ({darkMode}) => {
 
     return (
         <div className='locationInfoContainer'>
+
+            {loader && <Loading />}
+
             <h1 className='locInfoTitle'>Location Info</h1>
             <h2><b style={{color: "orange"}}>{name ? name : "Please log in!"}´s</b> {name ? "session." : ""} </h2>
             <div className='locInfoData'>
@@ -87,6 +92,7 @@ const LocationInfo = ({darkMode}) => {
                 </button>
             </div>
 
+            <div className='locInfList'>
             {
                 charactersPaginated?.map(resident => (
                     <Residents
@@ -95,6 +101,7 @@ const LocationInfo = ({darkMode}) => {
                         darkMode={darkMode} />
                 ))
             }
+            </div>
 
         </div>
     );

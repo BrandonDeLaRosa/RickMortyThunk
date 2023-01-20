@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../components/Loading';
 import { getLocationsThunk, userIdSearchThunk, userSearchThunk} from '../store/slices/locations.slice';
-import nameSlice from '../store/slices/name.slice';
+
 
 const Locations = ({darkMode}) => {
 
@@ -61,11 +61,13 @@ const Locations = ({darkMode}) => {
 
     return (
         <div className='locationsContainer'>
+            
+            {loader && <Loading />}
+            
             <div className='locTitle'>
-                <h1>Locations page</h1>
-                <h2>{name ? "Welcome: " : ""}<b style={{color: "orange"}}>{name ? name : "Please log in!"}.</b> </h2>
+                <h1 className='locTitle1'>Locations page</h1>
+                <h2 className='locTitle2'>{name ? "Welcome: " : ""}<b style={{color: "orange"}}>{name ? name : "Please log in!"}.</b> </h2>
             </div>
-            {/* {loader && <Loading />} */}
 
             <div className='locBody'>
                 {idSearch ?
@@ -74,7 +76,7 @@ const Locations = ({darkMode}) => {
                             <input className={darkMode? 'darkLocIdInp' : 'locIdInp'} type="text" value={idSearch} onChange={e => setIdSearch(e.target.value)} placeholder={"set a number(1-126)"} />
                             <button className={darkMode? 'darkLocBtnRtn' : 'locBtnRtn'} onClick={emptyInput}>Return</button>
                             <Link className={darkMode ? 'darkLocRslt' : 'locRslt'} to={`/location/${locations.id}`}>
-                                <h3 >{locations.name}</h3>
+                                <h3 className='locIdRslt'>{locations.name}</h3>
                             </Link>
                         </div>
                     )
@@ -92,7 +94,7 @@ const Locations = ({darkMode}) => {
 
                                         <div className='locBtns'>
                                             <button className={darkMode? 'darkLocBtn' : 'locBtn'} onClick={prevPage} disabled={page === 1}>prev Page</button>
-                                            <h3>{page}</h3>
+                                            <h3 className='locPageNum'>{page}</h3>
                                             <button className={darkMode? 'darkLocBtn' : 'locBtn'} onClick={nextPage} disabled={page === 7}>prev Page</button>
                                         </div>
                                         <h3>Total Pages: <b>{locations.info?.pages}</b></h3>
@@ -106,7 +108,7 @@ const Locations = ({darkMode}) => {
                                     locations.results?.map(location => (
                                         <li className='locList' key={location.id}>
                                             <Link className={darkMode ? 'darkLocListRslt' : 'locListRslt'} to={`/location/${location.id}`}>
-                                                <h5><b>{location.id}</b> {location.name}.</h5>
+                                                <h5 className='locListResult1'><b>{location.id}</b> {location.name}.</h5>
                                             </Link>
                                         </li>
                                     ))

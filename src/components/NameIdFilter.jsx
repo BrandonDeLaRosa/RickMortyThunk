@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { getCharactersByIdThunk, getCharactersThunk } from '../store/slices/characters.slice';
+import StatusCharacters from './StatusCharacters';
+import Characters from '../pages/Characters';
 
 const NameIdFilter = ({darkMode}) => {
     const characters = useSelector(state => state.characters)
@@ -68,8 +70,8 @@ const NameIdFilter = ({darkMode}) => {
     // console.log(nameFilter);
 
     return (
-        <div className='characterContainer'>
-            <h1>Characters by name / id</h1>
+        <div className='characterContainer' id='nameId'>
+            <h1 className={darkMode? 'darkCharactersNameFilter' : 'charactersNameFilter'}>Characters by Name / id</h1>
 
             {
                 idSearch ?
@@ -82,10 +84,11 @@ const NameIdFilter = ({darkMode}) => {
 
                             {
                                 characters.results?.map(character => (
-                                    <Link to={`/character/${character.id}`}
+                                    <Link className='nICharacterList' to={`/character/${character.id}`}
                                         key={character.id}>
-                                        <h4>{character.name}</h4>
-                                        <img src={character.image} alt="" />
+                                        <h4 className={darkMode? 'darkNICharacterName' : 'nICharacterName'}>{character.name}</h4>
+                                        <img className='filtersImgs' src={character.image} alt="" />
+                                        <StatusCharacters darkMode={darkMode}  character={character} />
                                     </Link>
                                 ))
                             }
@@ -119,7 +122,7 @@ const NameIdFilter = ({darkMode}) => {
                                 }
 
                             <input className={darkMode ? 'darkNameIdInp' : 'nameIdInp'} type="text" value={nameSearch} onChange={e => setNameSearch(e.target.value)} placeholder="Character´s name" /> <br />
-                            <h3>Total Pages: <b>{nameSearch ? nameFilter.info?.pages : characters.info?.pages}</b></h3>
+                            <h3>Total Pages: <b>{nameSearch ? nameFilter.info?.pages : characters.info?.pages}</b></h3> <br />
 
                             {
 
@@ -134,35 +137,40 @@ const NameIdFilter = ({darkMode}) => {
                 nameSearch ?
                     (
                         <>
-                            {
-                                nameFilter.results?.map(character => (
-                                    <Link className='nICharacterList' to={`/character/${character.id}`}
-                                        key={character.id}>
-                                        <h4 className={darkMode? 'darkNICharacterName' : 'nICharacterName'}>{character.name}</h4>
-                                        <img src={character.image} alt="" />
-                                    </Link>
-                                ))
-                            }
+                            <div className='filtersListContainer'>
+                                {
+                                    nameFilter.results?.map(character => (
+                                        <Link className='nICharacterList' to={`/character/${character.id}`}
+                                            key={character.id}>
+                                            <h4 className={darkMode ? 'darkNICharacterName' : 'nICharacterName'}>{character.name}</h4>
+                                            <img className='filtersImgs' src={character.image} alt="" />
+                                            <StatusCharacters darkMode={darkMode} character={character} />
+                                        </Link>
+                                    ))
+                                }
+                            </div>
 
                         </>
                     )
                     :
                     (
                         <>
-                            {
-                                characters.results?.map(character => (
-                                    <Link className='nICharacterList' to={`/character/${character.id}`}
-                                        key={character.id}>
-                                        <h4 className={darkMode? 'darkNICharacterName' : 'nICharacterName'}>{character.name}</h4>
-                                        <img src={character.image} alt="" />
-                                    </Link>
-                                ))
-                            }
-
+                            <div className='filtersListContainer'>
+                                {
+                                    characters.results?.map(character => (
+                                        <Link className='nICharacterList' to={`/character/${character.id}`}
+                                            key={character.id}>
+                                            <h4 className={darkMode ? 'darkNICharacterName' : 'nICharacterName'}>{character.name}</h4>
+                                            <img className='filtersImgs' src={character.image} alt="" />
+                                            <StatusCharacters darkMode={darkMode} character={character} />
+                                        </Link>
+                                    ))
+                                }
+                            </div>
                         </>
                     )
             }
-
+            { }
         </div>
     );
 };

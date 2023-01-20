@@ -1,0 +1,299 @@
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+/* ====================================================== SideMenu */
+    .linksMenu{
+        width: 35%;
+        transform: translateX(65vw);
+      }
+
+  /* =============================================== Locations ===========================================================*/
+  .locationsContainer{
+   padding-bottom: 2rem; 
+  }
+
+  .locBody{
+    width: 100%;
+  }
+
+  .locInputs{
+    width: 60%;
+  }
+
+  .locInput{
+      font-size: 20px;
+  }
+
+  .darkLocInput{
+      font-size: 20px;
+  }
+
+  .locBtns{
+    gap: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .locBtn{
+    font-size: 21px;
+  }
+
+  .darkLocBtn{
+    font-size: 21px;
+  }
+
+ .locListResult1{
+    font-size: 25px;
+ }
+
+  /* ================================================ Locations info ======================================================*/
+
+  .locationInfoContainer{
+    padding-bottom: 2rem;
+  }
+
+
+  .locInfoBtns{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .locInfoBtn{
+    font-size: 20px;
+    height: 3rem;
+    width: 15rem;
+  }
+  
+  .darkLocInfoBtn{
+    font-size: 20px;
+    height: 3rem;
+    width: 15rem;
+  }
+
+  .locInfoInp{
+    height: 3rem;
+    width: 4rem;
+    font-size: 20px;
+  }
+
+  .darkLocInfoInp{
+    height: 3rem;
+    width: 4rem;
+    font-size: 20px;
+  }
+
+  .locInfoPgsBtns{
+    margin-bottom: 4rem;
+  }
+
+  .pagesBtns{
+    font-size: 20px;
+    height: 3rem;
+    width: 6rem;
+    margin: 1rem 1rem 0rem;
+ 
+  }
+  
+  .darkPagesBtns{
+    font-size: 20px;
+    height: 3rem;
+    width: 6rem;
+    margin: 1rem 1rem 0rem;
+  }
+
+  .pagesBtn{
+    font-size: 18px;
+    height: 2rem;
+    top: .8rem;
+    margin: 0rem .3rem 0rem ;
+  }
+
+  .darkPagesBtn{
+    font-size: 18px;
+    height: 2rem;
+    top: .8rem;
+    margin: 0rem .3rem 0rem ;
+  }
+
+  .locInfList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .locInfCardImg{
+    width: 15rem;
+    height: 15rem;
+  }
+
+  /* ================================================== Character =========================================================== */
+
+  .characterContainer{
+    padding-top: 8rem;
+    width: 100%px
+  }
+
+  .charactersTitle1{
+    font-size: 40px;
+  }
+  .charactersTitle2{
+    font-size: 35px;
+  }
+
+  .charactersNameFilter{
+    font-size: 32px;
+  }
+  .darkCharactersNameFilter{
+    font-size: 32px;
+  }
+
+  .characterBtns2{
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .characterBtns2-bg{
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .darkCharacterBtns2-bg{
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .characterBtn{ 
+    font-size: 22px;
+    padding: .5rem .3rem;
+  }
+  .darkCharacterBtn{ 
+    font-size: 22px;
+    padding: .5rem .3rem;
+  }
+
+/* ------------------------- Filters */
+#nameId{
+    width: 100%;
+}
+
+.nameIdInp{
+  padding: .3rem .5rem;
+  text-align: center;
+  font-size: 22px;
+  width: 30rem;
+}
+
+
+.darkNameIdInp{
+    padding: .3rem .5rem;
+    text-align: center;
+    font-size: 22px;
+    width: 30rem;
+}
+
+.nameIdBtn{
+    font-size: 22px;
+    height: 2.8rem;
+    top: 2px;
+    margin-left: .3rem;
+}
+
+
+.darkNameIdBtn{
+  font-size: 22px;
+  height: 2.8rem;
+  top: 2px;
+  margin-left: .3rem;
+}
+
+.NameIdBtnsCont{
+  display: flex;
+  gap: 2rem;
+  margin: 0rem 0rem 1rem 1.5rem;
+
+}
+
+.darkNINameSearchBtn{
+  font-size: 22px;
+  height: 3rem;
+  top: 4px;
+  margin-left: .3rem;
+}
+
+.nINameSearchBtn{
+  font-size: 22px;
+  height: 3rem;
+  top: 4px;
+  margin-left: .3rem;
+}
+
+.filtersListContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+  /* ================================================ Character Info ====================================================== */
+
+  .characterInfoContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 1rem 0rem;
+  }
+
+  .lCdata{
+    color: var(--grey);
+    font-weight:normal ;
+    font-size: 22px;
+  }
+
+  .darkCIData{
+    color: var(--grey);
+    font-weight:normal ;
+    font-size: 22px;
+  }
+
+  .cIText{
+    font-size: 22px;
+  }
+
+  .characterInfoData{
+    margin-right: 3rem;
+  }
+
+  .characterInfoImg{
+    border-radius: 1rem;
+    height: 310px;
+    width: 310px;
+  }
+
+  .characInfoBtnsCont{
+    display: flex;
+    position: absolute;
+    top: 27rem;
+    gap: 3rem;
+  }
+
+  .ipadSize{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 3rem;
+    padding: 1rem;
+  }
+
+  .darkCharacterStatus3{
+    top: -20rem;
+    left: -.5rem;
+  }
+
+  .characterStatus3{
+    top: -19.5rem;
+    left: -.4rem;
+  }
+ 
+}
+
+

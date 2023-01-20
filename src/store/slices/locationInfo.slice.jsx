@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { setIsLoading } from './loading.slice';
 
 export const locationInfoSlice = createSlice({
     name: 'locationInfo',
@@ -12,17 +13,17 @@ export const locationInfoSlice = createSlice({
 })
 
 export const getLocationInfoThunk = (id) => (dispatch) => {
-    // dispatch(setIsLoading(true));
+    dispatch(setIsLoading(true));
     return axios.get(`https://rickandmortyapi.com/api/location/${id}`)
         .then((res) => dispatch(setLocationInfo(res.data)))
-        // .finally(() => dispatch(setIsLoading(false)));
+        .finally(() => dispatch(setIsLoading(false)));
 }
 
 export const userIdSearchThunk = (idSearch) => (dispatch) => {
-    // dispatch(setIsLoading(true));
+    dispatch(setIsLoading(true));
     return axios.get(`https://rickandmortyapi.com/api/location/${idSearch}`)
         .then((res) => dispatch(setLocationInfo(res.data)))
-        // .finally(() => dispatch(setIsLoading(false)));
+        .finally(() => dispatch(setIsLoading(false)));
 }
 
 export const { setLocationInfo } = locationInfoSlice.actions;

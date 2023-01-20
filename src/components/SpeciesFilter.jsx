@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import StatusCharacters from './StatusCharacters';
 
 const SpeciesFilter = ({darkMode}) => {
     const [speciesFilter, setTypeFilter] = useState([])
@@ -14,8 +15,8 @@ const SpeciesFilter = ({darkMode}) => {
 
     // console.log(speciesFilter);
     return (
-        <div className='characterContainer'>
-            <h1>Characters by Species</h1>
+        <div className='characterContainer' id='species'>
+            <h1 className={darkMode? 'darkCharactersNameFilter' : 'charactersNameFilter'}>Characters by Species</h1>
             <div>
                 <button className={darkMode ? 'darkNINameSearchBtn' : 'nINameSearchBtn'} onClick={() => { setSpecies("Human"), setPage(1) }}>Human</button>
                 <button className={darkMode ? 'darkNINameSearchBtn' : 'nINameSearchBtn'} onClick={() => { setSpecies("Alien"), setPage(1) }}>Alien</button>
@@ -24,21 +25,26 @@ const SpeciesFilter = ({darkMode}) => {
             </div>
 
             <h3>Selected Species: <b>{species}</b></h3>
-            <h3>Total Pages: <b>{speciesFilter.info?.pages}</b></h3>
 
             <div className='NameIdBtnsCont'>
                 <button className={darkMode ? 'darkNINameSearchBtn' : 'nINameSearchBtn'} onClick={() => setPage(page - 1)} disabled={page === 1}>Prev Page</button>
                 <h3 className='NIPage'><b>{page}</b></h3>
                 <button className={darkMode ? 'darkNINameSearchBtn' : 'nINameSearchBtn'} onClick={() => setPage(page + 1)} disabled={page === speciesFilter.info?.pages}>Next Page</button>
             </div>
-            {
-                speciesFilter.results?.map(character => (
-                    <Link className='nICharacterList' to={`/character/${character.id}`} key={character.id}>
-                        <h4 className={darkMode? 'darkNICharacterName' : 'nICharacterName'}>{character.name}</h4>
-                        <img src={character.image} alt="" />
-                    </Link>
-                ))
-            }
+
+            <h3>Total Pages: <b>{speciesFilter.info?.pages}</b></h3> <br />
+
+            <div className='filtersListContainer'>
+                {
+                    speciesFilter.results?.map(character => (
+                        <Link className='nICharacterList' to={`/character/${character.id}`} key={character.id}>
+                            <h4 className={darkMode ? 'darkNICharacterName' : 'nICharacterName'}>{character.name}</h4>
+                            <img className='filtersImgs' src={character.image} alt="" />
+                            <StatusCharacters darkMode={darkMode} character={character} />
+                        </Link>
+                    ))
+                }
+            </div>
         </div>
     );
 };

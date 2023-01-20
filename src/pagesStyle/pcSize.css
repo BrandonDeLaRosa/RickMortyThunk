@@ -1,0 +1,461 @@
+@media screen and (min-width: 1025px) and (max-width: 1949px){
+/* =============================================== HOME ================================================================ */
+
+ .homeContainer{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+  }
+
+  .homeInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .homeTitle{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom:  2rem;
+  }
+  
+  .homeTitle2{
+    font-size: 40px;
+    margin-bottom: 2rem;
+  }
+
+  .homeTitle3{
+    font-size: 35px;
+  }
+
+  .homeUserForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .homeForm{
+    gap: 1rem;
+    padding: 1rem;
+    width: 40%;
+  }
+
+  .log{
+    font-size: 40px;
+  }
+
+  .homeInp{
+      font-size: 30px;
+  }
+
+  .darkHomeInp{
+      font-size: 30px;
+  }
+
+  .homeInp:focus{
+    box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+    
+  .darkHomeInp:focus{
+  box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+
+  .homeBtn{
+    font-size: 30px;
+  }
+  
+  .darkHomeBtn{
+    font-size: 30px;
+  }
+
+  .homeBtn:hover{
+    box-shadow: 0px 0px 13px 5px yellowgreen;;
+  }
+  
+  .darkHomeBtn:hover{
+    box-shadow: 0px 0px 3px 5px yellowgreen;
+  }
+
+
+/* =============================================== Locations ===========================================================*/
+  
+.locationsContainer{
+    padding-top: 5rem;
+    padding-bottom: 2rem; 
+    height: 100%;
+   }
+
+   .locTitle1{
+    font-size: 50px;
+  }
+  .locTitle2{
+    font-size: 40px;
+    margin-bottom: 1rem; 
+  }
+  
+  .locIdInp{
+    font-size: 35px;
+  }
+
+  .locBtnRtn{
+    font-size: 35px;
+    height: 3.9rem;
+    margin-left: .5rem;
+  }
+
+  .darkLocIdInp{
+    font-size: 35px;
+  }
+
+  .darkLocBtnRtn{
+    font-size: 35px;
+    height: 3.9rem;
+    margin-left: .5rem;
+  }
+
+
+
+
+  .locIdRslt{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .locIdRslt:hover{
+    transition: .4s;
+    transform: scale(1.1);
+    color: var(--orange);
+  }
+
+   .locBody{
+     width: 100%;
+   }
+ 
+   .locInputs{
+     width: 60%;
+   }
+ 
+   .locInput{
+       font-size: 25px;
+   }
+ 
+   .darkLocInput{
+       font-size: 25px;
+   }
+ 
+   .locBtns{
+     gap: 5rem;
+     margin-bottom: 1rem;
+   }
+ 
+   .locBtn{
+     font-size: 22px;
+   }
+ 
+   .darkLocBtn{
+     font-size: 22px;
+   }
+ 
+  .locListResult1{
+     font-size: 25px;
+  }
+
+  .locationInfoContainer{
+    padding-bottom: 2rem;
+  }
+
+
+  .locInput:focus{
+    box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+
+  .darkLocInput:focus{
+   box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+
+
+  .locBtn:hover{
+    box-shadow: 0px 0px 13px 5px yellowgreen;;
+   }
+ 
+   .darkLocBtn:hover{
+    box-shadow: 0px 0px 13px 5px yellowgreen;;            
+   }
+
+
+   .locIdInp:focus{
+    box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+
+  .locBtnRtn:hover{
+    box-shadow: 0px 0px 13px 5px yellowgreen;
+  }
+
+   .darkLocIdInp:focus{
+    box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+
+  .darkLocBtnRtn:hover{
+    box-shadow: 0px 0px 13px 5px yellowgreen;
+  }
+
+
+
+
+
+
+   .locListResult1{
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform .2s;
+    padding: .5rem;
+ }
+
+ .locListResult1:hover{
+   color: var(--orange);
+   transition: .4s;
+   transform: translateX(3%);
+ }
+
+  .locInfoBtns{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .locInfoBtn{
+    font-size: 20px;
+    height: 3rem;
+    width: 15rem;
+  }
+  
+  .darkLocInfoBtn{
+    font-size: 20px;
+    height: 3rem;
+    width: 15rem;
+  }
+
+  .locInfoInp{
+    height: 3rem;
+    width: 4rem;
+    font-size: 20px;
+  }
+
+  .darkLocInfoInp{
+    height: 3rem;
+    width: 4rem;
+    font-size: 20px;
+  }
+
+  .locInfoPgsBtns{
+    margin-bottom: 4rem;
+  }
+
+  .pagesBtns{
+    font-size: 20px;
+    height: 3rem;
+    width: 6rem;
+    margin: 1rem 1rem 0rem;
+ 
+  }
+  
+  .darkPagesBtns{
+    font-size: 20px;
+    height: 3rem;
+    width: 6rem;
+    margin: 1rem 1rem 0rem;
+  }
+
+  .pagesBtn{
+    font-size: 18px;
+    height: 2rem;
+    top: .8rem;
+    margin: 0rem .3rem 0rem ;
+  }
+
+  .darkPagesBtn{
+    font-size: 18px;
+    height: 2rem;
+    top: .8rem;
+    margin: 0rem .3rem 0rem ;
+  }
+
+  .locInfList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .locInfCardImg{
+    width: 15rem;
+    height: 15rem;
+  }
+
+  /* ================================================== Character =========================================================== */
+
+  .characterContainer{
+    padding-top: 9rem;
+  }
+
+  .charactersTitle1{
+    font-size: 50px;
+  }
+  .charactersTitle2{
+    font-size: 45px;
+  }
+
+  .charactersNameFilter{
+    font-size: 40px;
+  }
+  .darkCharactersNameFilter{
+    font-size: 40px;
+  }
+
+  .characterBtns2{
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+  .characterBtns2-bg{
+    gap: 2.5rem;
+
+  }
+  .darkCharacterBtns2-bg{
+    gap: 2rem;
+
+  }
+
+  .characterBtn{ 
+    font-size: 30px;
+  }
+
+  .darkCharacterBtn{ 
+    font-size: 30px;
+  }
+
+/* ------------------------- Filters */
+
+.nameIdInp{
+  font-size: 30px;
+  width: 40rem;
+}
+
+
+.darkNameIdInp{
+    font-size: 30px;
+    width: 40rem;
+}
+
+.nameIdBtn{
+    font-size: 30px;
+    height: 3.5rem;
+    width: 8rem;
+}
+
+.darkNameIdBtn{
+  font-size: 30px;
+  height: 3.5rem;
+  width: 8rem;
+}
+
+.NameIdBtnsCont{
+    gap: 3rem;
+    margin: 0rem 0rem 1rem 3rem;
+}
+
+.NIPage{
+    font-size: 30px;
+}
+
+.darkNINameSearchBtn{
+  font-size: 30px;
+  height: 4rem;
+  top: 4px;
+  margin-left: .3rem;
+}
+
+.nINameSearchBtn{
+  font-size: 30px;
+  height: 4rem;
+  top: 4px;
+  margin-left: .3rem;
+}
+
+.filtersListContainer{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2rem;
+}
+
+
+  /* ================================================ Character Info ====================================================== */
+
+  .characterInfoContainer{
+    margin-top: 5rem;
+  }
+
+  .lCdata{
+    font-size: 30px;
+  }
+
+  .darkCIData{
+    font-size: 30px;
+  }
+
+  .cIText{
+    font-size: 30px;
+  }
+
+  .characterInfoData{
+    margin-right: 5rem;
+  }
+
+  .characterInfoImg{
+    height: 390px;
+    width: 390px;
+  }
+
+  .characInfoBtnsCont{
+    display: flex;
+    position: absolute;
+    top: 32rem;
+    gap: 4rem;
+  }
+
+  .ipadSize{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 5rem;
+    padding: 1rem;
+  }
+
+  .statFont3{
+    margin-top: .8rem;
+    font-size: 24px;
+  }
+  .darkStatFont3{
+    margin-top: .8rem;
+    font-size: 18px;
+  }
+
+  .darkCharacterStatus3{
+    height: 2.2rem;
+    width: 10rem;
+    top: -25rem;
+    left: -.5rem;
+  }
+ 
+  .characterStatus3{
+    height: 2.2rem;
+    width: 10rem;
+    top: -25rem;
+    left: -.5rem;
+  }
+}

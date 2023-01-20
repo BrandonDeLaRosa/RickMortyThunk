@@ -4,40 +4,95 @@ import { useState } from 'react';
 import StatusFilter from '../Components/StatusFilter';
 import GenderFilter from '../Components/GenderFilter';
 import { useSelector } from 'react-redux';
+import Loading from '../components/Loading';
+import { Link } from 'react-scroll';
 
-const Characters = ({darkMode}) => {
+// const Characters = ({darkMode,nameSearch,idSearch}) => {
+const Characters = ({darkMode,nameSearch,idSearch}) => {
     const [filterType, setFilterType] = useState("name/id");
     const name = useSelector(state => state.name);
+    const loader = useSelector(state => state.loader);
+    const [color,setColor] = useState(false)
+    const colorChange = () => {
+        if(window.scrollY >= 10) {
+            setColor(true)
+        }else{
+            setColor(false)
+        }
+    }
 
-//    const filters = () => {
-//     if(filterType === "species"){
-//         <SpeciesFilter/>
-//     }else if (filterType === "name/id"){
-//         <NameIdFilter/>
-//     }else if (filterType === "status"){
-//         <StatusFilter/>
-//     }else if (filterType === "gender"){
-//         <GenderFilter/>
-//     }
-//    }
-   
-   
+    window.addEventListener('scroll', colorChange)
+
     return (
-        <div className='characterContainer'>  
-            <div className='characterTitle'>
-            <h1>Characters Page</h1>
-            <h2><b style={{color: "orange"}}>{name ? name : "Please log in!"}´s</b> {name? "session." : ""} </h2> <br />
+        // <div className={color? 'characterContainer-bg' : 'characterContainer'}>
+        <div className= 'characterContainer'> 
+            <div className='charactersTitle'>
+
+                {loader && <Loading />}
+
+                <h1 className='charactersTitle1'>Characters Page</h1>
+                <h2 className='charactersTitle2'><b style={{ color: "orange" }}>{name ? name : "Please log in!"}´s</b> {name ? "session." : ""} </h2>
+            </div>
+{/*             
+            {
+                idSearch || nameSearch?
+                    (
+                        <><NameIdFilter darkMode={darkMode} /></>
+                    )
+                    :
+                    (
+                        <>
+                            <div className={darkMode ? (color ? 'darkCharacterBtns2-bg' : 'characterBtns2') : (color ? 'characterBtns2-bg' : 'characterBtns2')}>
+                                <Link className={darkMode ? 'darkCharacterBtn' : 'characterBtn'} to="nameId" smooth={true} duration={1000}>Name / Id </Link>
+                                <Link className={darkMode ? 'darkCharacterBtn' : 'characterBtn'} to="species" smooth={true} duration={1000}>Species</Link>
+                                <Link className={darkMode ? 'darkCharacterBtn' : 'characterBtn'} to="status" smooth={true} duration={1000}>Status</Link>
+                                <Link className={darkMode ? 'darkCharacterBtn' : 'characterBtn'} to="gender" smooth={true} duration={1000}>Gender</Link>
+                            </div>
+
+                            <div className='characterFilter2'>
+                                <NameIdFilter darkMode={darkMode} /> <br />
+                                <StatusFilter darkMode={darkMode} /> <br />
+                                <SpeciesFilter darkMode={darkMode} /> <br />
+                                <GenderFilter darkMode={darkMode} /> <br />
+                            </div>
+                        </>
+                    )
+            } */}
+            
+                
+            {/* <div className={darkMode? (color? 'darkCharacterBtns2-bg' : 'characterBtns2') : (color? 'characterBtns2-bg' : 'characterBtns2')}> */}
+            <div className={darkMode? (color? 'darkCharacterBtns2-bg' : 'characterBtns2') : (color? 'characterBtns2-bg' : 'characterBtns2')}>
+                <Link className={darkMode ? 'darkCharacterBtn' : 'characterBtn'} to="nameId" smooth={true} duration={1000}>Name / Id </Link>
+                <Link className={darkMode ? 'darkCharacterBtn' : 'characterBtn'} to="species" smooth={true} duration={1000}>Species</Link>
+                <Link className={darkMode ? 'darkCharacterBtn' : 'characterBtn'} to="status" smooth={true} duration={1000}>Status</Link>
+                <Link className={darkMode ? 'darkCharacterBtn' : 'characterBtn'} to="gender" smooth={true} duration={1000}>Gender</Link>
             </div>
 
-            <div className='characterBtns'>
+            <div className='characterFilter2'>
+                <NameIdFilter darkMode={darkMode} /> <br />
+                <StatusFilter darkMode={darkMode} /> <br />
+                <SpeciesFilter darkMode={darkMode} /> <br />
+                <GenderFilter darkMode={darkMode} /> <br />
+            </div>
+
+        </div>
+    );
+};
+
+export default Characters;
+
+// npm i react-router-hash-link
+// npm install react-scroll
+
+{/* <div className='characterBtns'>
             <button className={darkMode? 'darkCharacterBtn' : 'characterBtn'} onClick={() => setFilterType("name/id")}>Name / Id </button>
             <button className={darkMode? 'darkCharacterBtn' : 'characterBtn'} onClick={() => setFilterType("species")}>Species</button>
             <button className={darkMode? 'darkCharacterBtn' : 'characterBtn'} onClick={() => setFilterType("status")}>Status</button>
             <button className={darkMode? 'darkCharacterBtn' : 'characterBtn'} onClick={() => setFilterType("gender")}>Gender</button>
             </div>
 
-            <div className='characterFilter'>
 
+            <div className='characterFilter'>
                 {
                     filterType === "name/id" ? (
                         <NameIdFilter darkMode={darkMode} />
@@ -57,16 +112,21 @@ const Characters = ({darkMode}) => {
                         )
                     )
                 }
-
-                {/* <NameIdFilter darkMode={darkMode}/> */}
-                {/* <StatusFilter darkMode={darkMode}/> */}
-                {/* <SpeciesFilter darkMode={darkMode}/> */}
-                {/* <GenderFilter darkMode={darkMode}/>  */}
-            </div>
+            </div> */}
 
 
-        </div>
-    );
-};
 
-export default Characters;
+    /*
+
+             //    const filters = () => {
+    //     if(filterType === "species"){
+    //         <SpeciesFilter/>
+    //     }else if (filterType === "name/id"){
+    //         <NameIdFilter/>
+    //     }else if (filterType === "status"){
+    //         <StatusFilter/>
+    //     }else if (filterType === "gender"){
+    //         <GenderFilter/>
+    //     }
+    //    }
+    */
