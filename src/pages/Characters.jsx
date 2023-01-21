@@ -23,6 +23,8 @@ const Characters = ({darkMode,nameSearch,idSearch}) => {
 
     window.addEventListener('scroll', colorChange)
 
+    
+
     return (
         // <div className={color? 'characterContainer-bg' : 'characterContainer'}>
         <div className= 'characterContainer'> 

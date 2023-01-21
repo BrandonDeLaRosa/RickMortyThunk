@@ -61,13 +61,13 @@ const LocationInfo = ({darkMode}) => {
 
             {loader && <Loading />}
 
-            <h1 className='locInfoTitle'>Location Info</h1>
-            <h2><b style={{color: "orange"}}>{name ? name : "Please log in!"}´s</b> {name ? "session." : ""} </h2>
+            <h1 className='locInfoTitle1'>Location Info</h1>
+            <h2 className='locInfoTitle2'><b style={{color: "orange"}}>{name ? name : "Please log in!"}´s</b> {name ? "session." : ""} </h2>
             <div className='locInfoData'>
-                <h3><b className={darkMode? 'darkLIData':'lIdata'}>Name: </b>{locationInfo?.name}</h3>
-                <h3><b className={darkMode? 'darkLIData':'lIdata'}>Type: </b>{locationInfo?.type}</h3>
-                <h3><b className={darkMode? 'darkLIData':'lIdata'}>Dimension: </b>{locationInfo?.dimension}</h3>
-                <h3><b className={darkMode? 'darkLIData':'lIdata'}>Residents: </b>{locationInfo?.residents?.length}</h3>
+                <h3 className='locInfoText'><b className={darkMode? 'darkLIData':'lIdata'}>Name: </b>{locationInfo?.name}</h3>
+                <h3 className='locInfoText'><b className={darkMode? 'darkLIData':'lIdata'}>Type: </b>{locationInfo?.type}</h3>
+                <h3 className='locInfoText'><b className={darkMode? 'darkLIData':'lIdata'}>Dimension: </b>{locationInfo?.dimension}</h3>
+                <h3 className='locInfoText'><b className={darkMode? 'darkLIData':'lIdata'}>Residents: </b>{locationInfo?.residents?.length}</h3>
             </div>
             <div className='locInfoBtns'>
                 <button className={darkMode? 'darkLocInfoBtn' : 'locInfoBtn'} onClick={prevLoc} disabled={Number(id) === 1}>Prev Location</button>

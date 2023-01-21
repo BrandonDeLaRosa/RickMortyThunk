@@ -1,4 +1,13 @@
-@media screen and (min-width: 1950px){
+@media screen and (min-width: 1921px){
+  /* ==================================================== Loader ============ */
+
+  .spinner2{
+    width: 22rem ;
+    height:  22rem;
+    animation: load 2s infinite;
+  }
+
+
   /* ====================================================== SideMenu */
 
 .menuContainer {
@@ -39,7 +48,13 @@
 }
 
     /* =============================================== HOME ================================================================ */
-    
+    .homeContainer{
+      background-size: 280rem;
+      background-position-x: 1rem;
+      background-position-y: -4rem;
+      background-repeat: no-repeat;
+    }
+
       .homeInfo{
         padding: 4rem;
       }
@@ -108,9 +123,11 @@
     .locationsContainer{
         padding: 5rem; 
         height: 100%;
-        justify-content: flex-start;
+        /* background-image: url('../assets/RMLocations2.png'); */
+        background-position: bottom ;
+        background-size: 130rem;
        }
-       
+
       .locTitle1{
         font-size: 60px;
       }
@@ -237,183 +254,293 @@
       }
 
     
-      .locationInfoContainer{
-        padding-bottom: 5rem;
-      }
-    
-    
-      .locInfoBtns{
-        display: flex;
-        gap: 3rem;
-        margin-bottom: 2rem;
-      }
-    
-      .locInfoBtn{
-        font-size: 20px;
-        height: 3rem;
-        width: 15rem;
-      }
-      
-      .darkLocInfoBtn{
-        font-size: 20px;
-        height: 3rem;
-        width: 15rem;
-      }
-    
-      .locInfoInp{
-        height: 3rem;
-        width: 4rem;
-        font-size: 20px;
-      }
-    
-      .darkLocInfoInp{
-        height: 3rem;
-        width: 4rem;
-        font-size: 20px;
-      }
-    
-      .locInfoPgsBtns{
-        margin-bottom: 4rem;
-      }
-    
-      .pagesBtns{
-        font-size: 20px;
-        height: 3rem;
-        width: 6rem;
-        margin: 1rem 1rem 0rem;
-     
-      }
-      
-      .darkPagesBtns{
-        font-size: 20px;
-        height: 3rem;
-        width: 6rem;
-        margin: 1rem 1rem 0rem;
-      }
-    
-      .pagesBtn{
-        font-size: 18px;
-        height: 2rem;
-        top: .8rem;
-        margin: 0rem .3rem 0rem ;
-      }
-    
-      .darkPagesBtn{
-        font-size: 18px;
-        height: 2rem;
-        top: .8rem;
-        margin: 0rem .3rem 0rem ;
-      }
-    
-      .locInfList{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 3rem;
-      }
-    
-      .locInfCardImg{
-        width: 15rem;
-        height: 15rem;
-      }
-    
-      /* ================================================== Character =========================================================== */
-    
-      .characterContainer{
-        padding-top: 9rem;
-      }
-    
-      .charactersTitle1{
-        font-size: 50px;
-      }
-      .charactersTitle2{
-        font-size: 45px;
-      }
-    
-      .charactersNameFilter{
-        font-size: 40px;
-      }
-      .darkCharactersNameFilter{
-        font-size: 40px;
-      }
-    
-      .characterBtns2{
-        gap: 2.5rem;
-        margin-top: 2rem;
-      }
-      .characterBtns2-bg{
-        gap: 2.5rem;
-    
-      }
-      .darkCharacterBtns2-bg{
-        gap: 2rem;
-    
-      }
-    
-      .characterBtn{ 
-        font-size: 30px;
-      }
-    
-      .darkCharacterBtn{ 
-        font-size: 30px;
-      }
-    
-    /* ------------------------- Filters */
-    
-    .nameIdInp{
-      font-size: 30px;
-      width: 40rem;
-    }
-    
-    
-    .darkNameIdInp{
-        font-size: 30px;
-        width: 40rem;
-    }
-    
-    .nameIdBtn{
-        font-size: 30px;
-        height: 3.5rem;
-        width: 8rem;
-    }
-    
-    .darkNameIdBtn{
-      font-size: 30px;
-      height: 3.5rem;
-      width: 8rem;
-    }
-    
-    .NameIdBtnsCont{
-        gap: 3rem;
-        margin: 0rem 0rem 1rem 3rem;
-    }
-    
-    .NIPage{
-        font-size: 30px;
-    }
-    
-    .darkNINameSearchBtn{
-      font-size: 30px;
-      height: 4rem;
-      top: 4px;
-      margin-left: .3rem;
-    }
-    
-    .nINameSearchBtn{
-      font-size: 30px;
-      height: 4rem;
-      top: 4px;
-      margin-left: .3rem;
-    }
-    
-    .filtersListContainer{
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: center;
-       gap: 2rem;
-    }
-    
-    
+ /* ================================================ Locations info ======================================================*/
+
+ .locationInfoContainer{
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.locInfoTitle1{
+  font-size: 70px;
+}
+.locInfoTitle2{
+  font-size: 55px;
+}
+
+.locInfoText{
+  font-size: 45px;
+}
+
+  .locInfoBtns{
+    gap: 8rem;
+  }
+
+  .locInfoBtn{
+    font-size: 40px;
+    height: 4.7rem;
+    width: 25rem;
+  }
+  
+  .darkLocInfoBtn{
+    font-size: 40px;
+    height: 4.7rem;
+    width: 25rem;
+  }
+
+  .locInfoInp{
+    height: 4.5rem;
+    width: 8rem;
+    font-size: 40px;
+  }
+
+  .darkLocInfoInp{
+    height: 4.5rem;
+    width: 8rem;
+    font-size: 40px;
+  }
+
+  .locInfoPgsBtns{
+    margin-bottom: 5rem;
+  }
+
+  .pagesBtns{
+    font-size: 40px;
+    height: 5rem;
+    width: 10rem;
+    margin: 2rem 1rem 0rem;
+
+  }
+  
+  .darkPagesBtns{
+    font-size: 40px;
+    height: 5rem;
+    width: 10rem;
+    margin: 2rem 1rem 0rem;
+  }
+
+  .pagesBtn{
+    font-size: 30px;
+    height: 3.3rem;
+    top: 1.4rem;
+    margin: 0rem .3rem 0rem ;
+  }
+
+  .darkPagesBtn{
+    font-size: 30px;
+    height: 3.3rem;
+    top: 1.4rem;
+    margin: 0rem .3rem 0rem ;
+  }
+
+  .locInfList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7rem;
+    /* max-width: 1940px; */
+  }
+
+  .locInfCardNme{
+    font-size: 40px;
+  }
+
+  .darkLocInfCardNme{
+    font-size: 40px;
+  }
+
+  .locInfCardImg{
+    width: 30rem;
+    height: 30rem;
+    border-radius: 1rem;
+  }
+
+
+  
+.characterStatus{
+  height: 2.7rem;
+  width: 45%;
+  top: -34rem;
+}
+
+.darkCharacterStatus{
+  height: 2.7rem;
+  width: 45%;
+  top:-34rem;
+}
+
+.statFont{
+  font-size: 30px;
+}
+.darkStatFont{
+  font-size: 30px;
+}
+
+.status{
+  width: 35px;
+  height: 35px;
+}
+
+
+
+  /* ================================================== Character =========================================================== */
+
+  .characterContainer{
+    padding-top: 9rem;
+  }
+
+  .charactersTitle1{
+    font-size: 75px;
+  }
+  .charactersTitle2{
+    font-size: 60px;
+  }
+
+  .charactersNameFilter{
+    font-size: 65px;
+  }
+  .darkCharactersNameFilter{
+    font-size: 6px;
+  }
+
+  .characterBtns2{
+    gap: 5rem;
+    margin-top: 5rem;
+    padding: 1rem;
+  }
+  .characterBtns2-bg{
+    gap: 5rem;
+
+  }
+  .darkCharacterBtns2-bg{
+    gap: 5rem;
+
+  }
+
+  .characterBtn{ 
+    font-size: 40px;
+    /* cursor: pointer; */
+  }
+
+  .darkCharacterBtn{ 
+    font-size: 40px;
+    /* cursor: pointer; */
+  }
+
+  .characterBtn:hover{ 
+    box-shadow: 0px 0px 13px 5px yellowgreen;
+  }
+
+  .darkCharacterBtn:hover{ 
+    box-shadow: 0px 0px 13px 5px yellowgreen;
+  }
+
+/* ------------------------- Filters */
+
+.nameIdInp{
+  font-size: 50px;
+  width: 70rem;
+}
+
+
+.darkNameIdInp{
+    font-size: 50px;
+    width: 70rem;
+}
+.nameIdInp:focus{
+ box-shadow: 0px 0px 13px 5px var(--orange); 
+}
+
+
+.darkNameIdInp:focus{
+  box-shadow: 0px 0px 13px 5px var(--orange); 
+}
+
+
+
+.nameIdBtn{
+    font-size: 50px;
+    height: 5.2rem;
+    width: 14rem;
+}
+
+.darkNameIdBtn{
+  font-size: 50px;
+  height: 5.2rem;
+  width: 14rem;
+}
+.nameIdBtn:hover{
+  box-shadow: 0px 0px 13px 5px yellowgreen;
+}
+
+.darkNameIdBtn:hover{
+  box-shadow: 0px 0px 13px 5px yellowgreen;
+}
+
+
+
+.NameIdBtnsCont{
+    gap: 6rem;
+    margin: 0rem 0rem 1rem 3rem;
+}
+
+.NIPage{
+    font-size: 60px;
+}
+
+.darkNINameSearchBtn{
+  font-size: 50px;
+  height: 5.5rem;
+  top: 4px;
+  margin-left: .3rem;
+}
+
+.nINameSearchBtn{
+  font-size: 50px;
+  height: 5.5rem;
+  top: 4px;
+  margin-left: .3rem;
+}
+.darkNINameSearchBtn:hover{
+  box-shadow: 0px 0px 13px 5px yellowgreen;
+}
+
+.nINameSearchBtn:hover{
+  box-shadow: 0px 0px 13px 5px yellowgreen;
+}
+
+
+
+.filtersListContainer{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2rem;
+}
+
+.darkNICharacterName{
+  font-size: 30px;
+}
+.nICharacterName{
+  font-size: 30px;
+}
+
+.darkNICharacterName:hover{
+  transition: .2s;
+  transform: scale(1.1);
+  color: var(--orange);
+}
+.nICharacterName:hover{
+  transition: .2s;
+  transform: scale(1.1);
+  color: var(--orange);
+}
+
+.filtersImgs:hover{
+  transition: .2s;
+    transform: scale(1.1);
+    border: 5px solid var(--orange);
+}
       /* ================================================ Character Info ====================================================== */
     
       .lCdata{

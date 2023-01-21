@@ -5,6 +5,7 @@ import Loading from '../components/Loading';
 import { getLocationsThunk, userIdSearchThunk, userSearchThunk} from '../store/slices/locations.slice';
 
 
+
 const Locations = ({darkMode}) => {
 
     const dispatch = useDispatch()
@@ -61,7 +62,7 @@ const Locations = ({darkMode}) => {
 
     return (
         <div className='locationsContainer'>
-            
+            {/* <img className='locations-bg' src={bgLocations} alt="" /> */}
             {loader && <Loading />}
             
             <div className='locTitle'>
@@ -103,7 +104,7 @@ const Locations = ({darkMode}) => {
                                 )
                             }
 
-                            <div className='listContainer'>
+                            <div className='listContainer' >
                                 {
                                     locations.results?.map(location => (
                                         <li className='locList' key={location.id}>

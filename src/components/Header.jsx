@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import home from '../assets/RMH.png'
 
 const Header = ({darkMode, setDarkMode}) => {
 
@@ -11,6 +12,17 @@ const Header = ({darkMode, setDarkMode}) => {
     
     const randomLoc = Math.floor(Math.random() * 126) +1
     const randomCtr = Math.floor (Math.random() * 826) +1
+
+    // const [fullScreen, setFullScreen] = useState(true)
+    // const homeLogo = () => {
+    //     if(window.screenX >= 1170){
+    //         setFullScreen(true)
+    //     }else{
+    //         setFullScreen(false)
+    //     }
+    // }
+
+    // window.addEventListener('screen', homeLogo)
 
     return (
         <div className='menuContainer'>
@@ -79,6 +91,11 @@ const Header = ({darkMode, setDarkMode}) => {
                                         )
                                 }
                             </nav>
+                            <Link to="/"><img className='homePageBtn' src={home} alt="" /></Link>
+                            {/* {
+                                fullScreen? (<><Link to="/"><img className='homePageBtn' src={home} alt="" /></Link></>) : ""
+                            } */}
+                         
                             <button className='nav-btn' onClick={showNavBar}>
                                 <i style={{ color: darkMode ? "white" : "black" }} class="fa-solid fa-bars"></i>
                             </button>

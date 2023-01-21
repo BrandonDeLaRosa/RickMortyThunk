@@ -51,7 +51,8 @@
 
 .loader{
   margin: 0 auto;
-  background-color: #000000;
+  background-color: rgba(5, 42, 47, 0.541);
+  /* background-color: rgba(0, 0, 0, 0.596);  */
   width: 100%;
   height: 100%;
   position: absolute;
@@ -65,9 +66,9 @@
   z-index: 10;
 }
 
-.spinner{
-  width: 15rem ;
-  height:  15rem;
+.spinner2{
+  width: 11rem ;
+  height:  11rem;
   animation: load 2s infinite;
   /* animation: load2 1s infinite; */
 }
@@ -77,19 +78,6 @@
   transform: rotate(360deg);
  }
   
-}
-
-@keyframes load2{
-  0% {
-    transform: translateY( 0 );
-  }
-  50%{
-    transform: translateY( 10px );
-  }
-  100%{
-    transform: translateY( 0 );
-    
-  }
 }
 
 /* ====================================================== SideMenu */
@@ -138,6 +126,28 @@
     border: none;
     outline: none;
     font-size: 25px;
+  }
+
+  .homePageBtn{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 5rem;
+    width: 12rem;
+    animation: homeIcon 1s infinite;
+  }
+
+  @keyframes homeIcon{
+    0% {
+      transform: translateY( 0 );
+    }
+    50%{
+      transform: translateY( 5px );
+    }
+    100%{
+      transform: translateY( 0 );
+      
+    }
   }
   
   .link{
@@ -221,7 +231,6 @@
   align-items: center;
   width: 55%;
   position: relative;
-  top: -3.7rem;
   top: -18rem;
   padding: 10px;
   border-top-right-radius: 1rem;
@@ -235,7 +244,7 @@
   align-items: center;
   width: 50%;
   position: relative;
-  top:16rem;
+  top:-18rem;
   padding:  10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -280,10 +289,10 @@
   height: 1.7rem;
   display: flex;
   align-items: center;
-  width: 45%;
+  width: 82%;
   position: relative;
-  top: -3.7rem;
-  top: -18.8rem;
+  top: -13rem;
+  left: 0rem;
   padding: 10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -294,9 +303,10 @@
   height: 1.7rem;
   display: flex;
   align-items: center;
-  width: 45%;
+  width: 82%;
   position: relative;
-  top: -18.8rem;
+  top: -13rem;
+  left: 0rem;
   padding: 10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -378,6 +388,12 @@
     /* justify-content: center; */
     align-items: center;
     height: 100vh;
+    background-image: url('./assets/portal.png');
+    background-size: 70rem;
+    /* background-position-x: center; */
+    background-position-x: -15rem;
+    background-position-y: 16rem;
+    background-repeat: no-repeat;
   }
 
   .homeInfo{
@@ -470,10 +486,18 @@
     height: 100%;
     justify-content: center;
     align-items: center;
+    /* padding-bottom: 1rem; */
+    /* background-image: url(./assets/RMLocations.png); */
+    background-image: url(./assets/RMLocations2.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    /* background-size: 100rem; */
+    background-size: auto;
     padding-bottom: 1rem;
   }
 
   .locBody{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -536,21 +560,28 @@
 
   .listContainer{
     width: 90%;
+    padding: .5rem;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
   }
 
   .locList{
     list-style: none;
+    font-size: bold;
   }
 
   .locListRslt{
     text-decoration: none;
     color: var(--black);
+    font-size: bold;
   }
 
   .darkLocListRslt{
     text-decoration: none;
     color: var(--white);
+    font-weight: bold;
   }
 
   .locIdSrch{
@@ -630,6 +661,11 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    background-image: url('./assets/locInf.png'); 
+    background-size: 40rem; 
+    /* background-repeat: no-repeat; */
+    background-position-x: center;
+    background-position-y: top;
   }
 
   .locInfoTitle{
@@ -749,7 +785,7 @@
     position: relative;
     top: 4px;
     margin: 0rem .2rem 0rem ;
-    box-shadow: 0px 0px 3px 1px rgb(0, 0, 0);
+    box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
   }
 
   .darkPagesBtn{
@@ -764,9 +800,14 @@
     margin: 0rem .2rem 0rem;
     box-shadow: 0px 0px 3px 3px rgb(153, 205, 50);
   }
+  .pagesBtn:focus{
+      background-color: var(--orange);
+    /* box-shadow: 0px 0px 5px 1px rgb(0, 0, 0); */
+  }
 
-  .locInfChaCardContainer{
-    
+  .darkPagesBtn:focus{
+    background-color: var(--orange);
+    /* box-shadow: 0px 0px 3px 3px rgb(153, 205, 50); */
   }
 
   .locInfChaCard{
@@ -783,6 +824,10 @@
     border-radius: 1rem;
   }
 
+  /* .locInfCardImg:{
+   
+  } */
+
   .locInfCardNme{
     color: var(--black);
   }
@@ -798,6 +843,8 @@
     flex-direction: column;
     align-items: center;
     padding-top: 6.2rem;
+    background-image: url(./assets/ricks.png);
+    /* background-repeat: no-repeat; */
   }
 
   .charactersTitle{
@@ -1011,7 +1058,9 @@
 }
 
 .filtersImgs{
-  border-radius: 1rem;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
   margin-top: 1rem;
 }
 
@@ -1024,6 +1073,12 @@
     align-items: center;
     padding: 0rem 1rem 0rem;
     /* font-size: 5px; */
+    background-image: url(./assets/pickels.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: 180rem; */
+    background-position-x: -0rem;
+    background-position-y: -80rem;
   }
 
   .lCdata{

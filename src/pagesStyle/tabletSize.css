@@ -1,13 +1,37 @@
 @media screen and (min-width: 700px) and (max-width: 1024px) {
+
+  /* ==================================================== Loader ============ */
+
+  .spinner2{
+    width: 16rem ;
+    height:  16rem;
+    animation: load 2s infinite;
+  }
 /* ====================================================== SideMenu */
     .linksMenu{
         width: 35%;
         transform: translateX(65vw);
       }
 
+  /* =============================================== Home ===========================================================*/
+
+  .homeContainer{
+    background-size: 100rem;
+    background-position-x: -18rem;
+    background-position-y: 6rem;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+  }
+
   /* =============================================== Locations ===========================================================*/
   .locationsContainer{
-   padding-bottom: 2rem; 
+   /* padding-bottom: 2rem;  */
+  }
+
+  .locationsContainer{
+    /* background-image: url('../assets/RMLocations2.png'); */
+    background-position: bottom ;
+    background-size: 70rem;
   }
 
   .locBody{
