@@ -12,6 +12,26 @@
         width: 35%;
         transform: translateX(65vw);
       }
+      .homePageBtn{
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        height: 5rem;
+        width: 12rem;
+        animation: homeIcon 1s infinite;
+      }  
+      @keyframes homeIcon{
+        0% {
+          transform: translateY( 0 );
+        }
+        50%{
+          transform: translateY( 2px );
+        }
+        100%{
+          transform: translateY( 0 );
+          
+        }
+      }
 
   /* =============================================== Home ===========================================================*/
 
@@ -283,6 +303,7 @@
 
   .characterInfoData{
     margin-right: 3rem;
+    text-align: left;
   }
 
   .characterInfoImg{

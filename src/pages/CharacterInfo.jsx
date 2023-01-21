@@ -29,9 +29,9 @@ const CharacterInfo = ({darkMode}) => {
     
     return (
         <div className='characterInfoContainer'>
-            <h1>Characters Info</h1>
+            <h1 className='characterInfoTitle1'>Characters Info</h1>
             {loader && <Loading />}
-            <h2><b style={{color: "orange"}}>{name ? name : "Please log in!"}´s</b> {name ? "session." : ""} </h2> <br />
+            <h2 className='characterInfoTitle2'><b style={{color: "orange"}}>{name ? name : "Please log in!"}´s</b> {name ? "session." : ""} </h2> <br />
             <div className='ipadSize'>
                 <div className='characterInfoData'>
                     <h3 className='cIText'> <b className={darkMode ? 'darkCIData' : 'cIdata'}>Name: </b> {characterInfo?.name}</h3>
@@ -44,7 +44,7 @@ const CharacterInfo = ({darkMode}) => {
                     <h3 className='cIText'> <b className={darkMode ? 'darkCIData' : 'cIdata'}>No. of episodes </b> {characterInfo?.episode?.length}</h3>
                 </div> <br />
                 
-                <div>
+                <div className='characterInfoAnimated'>
                     <img className='characterInfoImg' src={characterInfo.image} alt="CharacterImage" /> <br />
                     <StatusCharacterInfo characterInfo={characterInfo} darkMode={darkMode} />
                 </div>

@@ -40,7 +40,7 @@ const LocationInfo = ({darkMode}) => {
         }
     },[ idSearch])
 
-    const [page, setPage] = useState(2)
+    const [page, setPage] = useState(1)
     const residentsPerPage = 10
 
     const lastIndex = page * residentsPerPage
@@ -91,6 +91,7 @@ const LocationInfo = ({darkMode}) => {
                     next
                 </button>
             </div>
+
 
             <div className='locInfList'>
             {

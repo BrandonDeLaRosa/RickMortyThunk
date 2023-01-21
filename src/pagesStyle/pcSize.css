@@ -7,7 +7,27 @@
     height:  19rem;
     animation: load 2s infinite;
   }
-
+/* ============================================== HOMEICON */
+.homePageBtn{
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  height: 5rem;
+  width: 12rem;
+  animation: homeIcon 1s infinite;
+}  
+@keyframes homeIcon{
+  0% {
+    transform: translateY( 0 );
+  }
+  50%{
+    transform: translateY( 2px );
+  }
+  100%{
+    transform: translateY( 0 );
+    
+  }
+}
 
 /* =============================================== HOME ================================================================ */
 
@@ -83,7 +103,7 @@
   }
 
   .homeBtn:hover{
-    box-shadow: 0px 0px 13px 5px yellowgreen;;
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
   }
   
   .darkHomeBtn:hover{
@@ -193,11 +213,11 @@
 
 
   .locBtn:hover{
-    box-shadow: 0px 0px 13px 5px yellowgreen;;
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
    }
  
    .darkLocBtn:hover{
-    box-shadow: 0px 0px 13px 5px yellowgreen;;            
+    box-shadow: 0px 0px 13px 5px yellowgreen;          
    }
 
 
@@ -206,7 +226,7 @@
   }
 
   .locBtnRtn:hover{
-    box-shadow: 0px 0px 13px 5px yellowgreen;
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
   }
 
    .darkLocIdInp:focus{
@@ -270,6 +290,22 @@
     width: 17rem;
   }
 
+  .locInfoBtn:hover{
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);    
+  }
+  
+  .darkLocInfoBtn:hover{
+    box-shadow: 0px 0px 13px 5px yellowgreen;  
+  }
+
+  .locInfoBtn:focus{
+    color: var(--white);
+  }
+  
+  .darkLocInfoBtn:focus{
+      color: var(--white);
+  }
+
   .locInfoInp{
     height: 4rem;
     width: 4.5rem;
@@ -281,10 +317,18 @@
     width: 4.2rem;
     font-size: 30px;
   }
+  .locInfoInp:focus{
+    box-shadow: 0px 0px 13px 5px var(--orange);
+  }
+
+  .darkLocInfoInp:focus{
+    box-shadow: 0px 0px 13px 5px var(--orange);
+  }
 
   .locInfoPgsBtns{
     margin-bottom: 4rem;
   }
+
 
   .pagesBtns{
     font-size: 25px;
@@ -301,6 +345,23 @@
     margin: 1rem 1rem 0rem;
   }
 
+  .pagesBtns:hover{
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
+  }
+  
+  .darkPagesBtns:hover{
+    box-shadow: 0px 0px 13px 5px yellowgreen;
+  }
+  .pagesBtns:focus{
+    color: var(--white);
+  }
+  
+  .darkPagesBtns:focus{
+    color: var(--white);
+  }
+
+
+
   .pagesBtn{
     font-size: 20px;
     height: 2.2rem;
@@ -315,12 +376,25 @@
     margin: 0rem .3rem 0rem ;
   }
 
+  .pagesBtn:hover{
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
+  }
+
+  .darkPagesBtn:hover{
+    box-shadow: 0px 0px 13px 5px yellowgreen;
+  }
+
   .locInfList{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
     max-width: 1940px;
+  }
+
+  .locInfChaCard:hover{
+    box-shadow: 0px 0px 13px 4px var(--orange);
+    border-radius: 1rem;
   }
 
   .locInfCardNme{
@@ -409,24 +483,34 @@
   }
 
   .characterBtn:hover{ 
-    box-shadow: 0px 0px 13px 5px yellowgreen;
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
+    box-shadow: 0px 0px 13px 3px cyan;
+    color: var(--white);
   }
 
   .darkCharacterBtn:hover{ 
     box-shadow: 0px 0px 13px 5px yellowgreen;
+    color: var(--white);
+  }
+  .characterBtn:focus{ 
+    color: var(--white);
+  }
+
+  .darkCharacterBtn:focus{ 
+    color: var(--white);
   }
 
 /* ------------------------- Filters */
 
 .nameIdInp{
   font-size: 30px;
-  width: 45rem;
+  width: 40rem;
 }
 
 
 .darkNameIdInp{
     font-size: 30px;
-    width: 45rem;
+    width: 40rem;
 }
 .nameIdInp:focus{
  box-shadow: 0px 0px 13px 5px var(--orange); 
@@ -440,18 +524,20 @@
 
 
 .nameIdBtn{
-    font-size: 32px;
+    font-size: 25px;
     height: 3.5rem;
     width: 10rem;
+    padding-top: 1rem;
 }
 
 .darkNameIdBtn{
-  font-size: 32px;
+  font-size: 25px;
   height: 3.5rem;
   width: 10rem;
+  padding-top: 1rem;
 }
 .nameIdBtn:hover{
-  box-shadow: 0px 0px 13px 5px yellowgreen;
+  box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
 }
 
 .darkNameIdBtn:hover{
@@ -471,23 +557,31 @@
 
 .darkNINameSearchBtn{
   font-size: 25x;
-  height: 4rem;
+  height: 3.2rem;
   top: 4px;
-  margin-left: .3rem;
+  margin: 1rem 1rem 2rem 1rem;
 }
 
+
 .nINameSearchBtn{
-  font-size:25px;
-  height: 4rem;
+  font-size:20px;
+  height: 3.2rem;
   top: 4px;
-  margin-left: .3rem;
+  margin: 1em 1rem 2rem 1rem;
 }
+
 .darkNINameSearchBtn:hover{
   box-shadow: 0px 0px 13px 5px yellowgreen;
 }
+.darkNINameSearchBtn:focus{
+  color: var(--white);
+}
 
 .nINameSearchBtn:hover{
-  box-shadow: 0px 0px 13px 5px yellowgreen;
+  box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
+}
+.nINameSearchBtn:focus{
+  color: var(--white);
 }
 
 
@@ -531,19 +625,20 @@
   /* ================================================ Character Info ====================================================== */
 
   .characterInfoContainer{
-    margin-top: 5rem;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position-x: center;
   }
 
-  .lCdata{
-    font-size: 30px;
+  .characterInfoTitle1{
+    font-size: 45px;
   }
-
-  .darkCIData{
-    font-size: 30px;
+  .characterInfoTitle2{
+    font-size: 40px;
   }
 
   .cIText{
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .characterInfoData{
@@ -558,7 +653,7 @@
   .characInfoBtnsCont{
     display: flex;
     position: absolute;
-    top: 32rem;
+    top: 29rem;
     gap: 4rem;
   }
 
@@ -568,8 +663,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 5rem;
-    padding: 1rem;
+    top: 1rem;
+    padding: 0rem;
   }
 
   .statFont3{
@@ -584,14 +679,18 @@
   .darkCharacterStatus3{
     height: 2.2rem;
     width: 10rem;
-    top: -25rem;
-    left: -.5rem;
+    top: -24.5rem;
+    left: 0rem;
   }
  
   .characterStatus3{
     height: 2.2rem;
     width: 10rem;
-    top: -25rem;
-    left: -.5rem;
+    top: -24.5rem;
+    left: 0rem;
+  }
+
+  .characterInfoData{
+    text-align: left;
   }
 }
