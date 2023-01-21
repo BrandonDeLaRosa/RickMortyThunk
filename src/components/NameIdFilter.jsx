@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { getCharactersByIdThunk, getCharactersThunk } from '../store/slices/characters.slice';
 import StatusCharacters from './StatusCharacters';
-import Characters from '../pages/Characters';
+
 
 const NameIdFilter = ({darkMode}) => {
     const characters = useSelector(state => state.characters)
