@@ -1042,9 +1042,11 @@
   margin-left: .3rem;
 }
 
+
 .nICharacterList{
   text-decoration: none;
   margin-top: 2rem;
+  width: 192px;
 }
 
 .nICharacterName{
