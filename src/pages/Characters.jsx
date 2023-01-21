@@ -1,15 +1,15 @@
-import SpeciesFilter from '../Components/SpeciesFilter';
-import NameIdFilter from '../Components/NameIdFilter';
+import SpeciesFilter from '../components/SpeciesFilter';
+import NameIdFilter from '../components/NameIdFilter';
 import { useState } from 'react';
-import StatusFilter from '../Components/StatusFilter';
-import GenderFilter from '../Components/GenderFilter';
+import StatusFilter from '../components/StatusFilter';
+import GenderFilter from '../components/GenderFilter';
 import { useSelector } from 'react-redux';
 import Loading from '../components/Loading';
 import { Link } from 'react-scroll';
 
 // const Characters = ({darkMode,nameSearch,idSearch}) => {
 const Characters = ({darkMode,nameSearch,idSearch}) => {
-    const [filterType, setFilterType] = useState("name/id");
+    // const [filterType, setFilterType] = useState("name/id");
     const name = useSelector(state => state.name);
     const loader = useSelector(state => state.loader);
     const [color,setColor] = useState(false)
