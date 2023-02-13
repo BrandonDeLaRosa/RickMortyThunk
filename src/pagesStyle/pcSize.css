@@ -42,7 +42,7 @@
   .homeInfo{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
     padding: 2rem;
   }
 
@@ -59,6 +59,7 @@
 
   .homeTitle3{
     font-size: 35px;
+    margin-bottom: .5rem;
   }
 
   .homeUserForm{
@@ -114,7 +115,7 @@
 /* =============================================== Locations ===========================================================*/
   
 .locationsContainer{
-    padding-top: 5rem;
+    padding-top: 0rem;
     padding-bottom: 2rem; 
     height: 100%;
    }
@@ -408,8 +409,8 @@
   }
 
   .locInfCardImg{
-    width: 20rem;
-    height: 20rem;
+    width: 14rem;
+    height: 14rem;
     border-radius: 1rem;
   }
 
@@ -417,26 +418,30 @@
   
 .characterStatus{
   height: 2.4rem;
-  width: 45%;
-  top: -23rem;
+  width: 47%;
+  top: -17rem;
 }
 
 .darkCharacterStatus{
   height: 2.4rem;
-  width: 45%;
-  top:-23rem;
+  width: 47%;
+  top:-17rem;
 }
 
 .statFont{
-  font-size: 20px;
+  font-size: 16px;
+  position: relative;
+  left: -.7rem;
 }
 .darkStatFont{
-  font-size: 20px;
+  font-size: 16px;
+  position: relative;
+  left: -.7rem;
 }
 
 .status{
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
   /* ================================================== Character =========================================================== */
@@ -634,26 +639,26 @@
     font-size: 45px;
   }
   .characterInfoTitle2{
-    font-size: 40px;
-  }
-
-  .cIText{
     font-size: 35px;
   }
 
+  .cIText{
+    font-size: 30px;
+  }
+
   .characterInfoData{
-    margin-right: 5rem;
+    margin-right: 9rem;
   }
 
   .characterInfoImg{
-    height: 390px;
-    width: 390px;
+    height: 320px;
+    width: 320px;
   }
 
   .characInfoBtnsCont{
     display: flex;
     position: absolute;
-    top: 29rem;
+    top: 23rem;
     gap: 4rem;
   }
 
@@ -669,24 +674,24 @@
 
   .statFont3{
     margin-top: .8rem;
-    font-size: 24px;
+    font-size: 22px;
   }
   .darkStatFont3{
     margin-top: .8rem;
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .darkCharacterStatus3{
     height: 2.2rem;
     width: 10rem;
-    top: -24.5rem;
+    top: -20rem;
     left: 0rem;
   }
  
   .characterStatus3{
     height: 2.2rem;
     width: 10rem;
-    top: -24.5rem;
+    top: -20rem;
     left: 0rem;
   }
 
