@@ -80,11 +80,11 @@
   }
 
   .homeInp{
-      font-size: 30px;
+      font-size: 25px;
   }
 
   .darkHomeInp{
-      font-size: 30px;
+      font-size: 25px;
   }
 
   .homeInp:focus{
@@ -96,11 +96,11 @@
   }
 
   .homeBtn{
-    font-size: 30px;
+    font-size: 25px;
   }
   
   .darkHomeBtn{
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .homeBtn:hover{
@@ -258,6 +258,7 @@
  .locationInfoContainer{
   gap: .8rem;
   padding: 1rem;
+  height: 100vh;
 }
 
 .locInfoTitle1{
@@ -404,6 +405,18 @@
     flex-wrap: wrap;
     gap: 4rem;
     max-width: 1940px;
+    overflow-y: hidden;
+  }
+
+  .locInfList::-webkit-scrollbar{
+    height: 8px;
+  }
+  .locInfList::-webkit-scrollbar-track{
+    background-color: rgba(13, 31, 99, 0.651);
+  }
+  .locInfList::-webkit-scrollbar-thumb{
+    background: #d1d1d1;
+    border-radius: 5rem;
   }
 
   .locInfChaCard:hover{
@@ -525,13 +538,13 @@
 /* ------------------------- Filters */
 
 .nameIdInp{
-  font-size: 30px;
+  font-size: 20px;
   width: 40rem;
 }
 
 
 .darkNameIdInp{
-    font-size: 30px;
+    font-size: 20px;
     width: 40rem;
 }
 .nameIdInp:focus{
@@ -547,16 +560,16 @@
 
 .nameIdBtn{
     font-size: 25px;
-    height: 3.5rem;
+    height: 3rem;
     width: 10rem;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 .darkNameIdBtn{
   font-size: 25px;
-  height: 3.5rem;
+  height: 3rem;
   width: 10rem;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }
 .nameIdBtn:hover{
   box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
@@ -613,6 +626,18 @@
    flex-wrap: wrap;
    justify-content: center;
    gap: 4rem;
+   overflow-y: hidden;
+}
+
+.filtersListContainer::-webkit-scrollbar{
+  height: 8px;
+}
+.filtersListContainer::-webkit-scrollbar-track{
+  background-color: rgba(13, 31, 99, 0.651);
+}
+.filtersListContainer::-webkit-scrollbar-thumb{
+  background: #d1d1d1;
+  border-radius: 5rem;
 }
 
 .darkNICharacterName{
