@@ -256,27 +256,40 @@
  /* ================================================ Locations info ======================================================*/
 
  .locationInfoContainer{
-  gap: 1rem;
+  gap: .8rem;
   padding: 1rem;
 }
 
 .locInfoTitle1{
   font-weight: bold;
   font-size: 45px;
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
 }
 .locInfoTitle2{
   font-weight: bold;
   font-size: 40px;
 }
 
+.locInfoData{
+  display: flex;
+}
+
 .locInfoText{
-  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid gray; */
+  padding: .5rem 3rem;
+  font-size: 25px;
 }
 
   .locInfoBtns{
     display: flex;
     gap: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
   }
 
   .locInfoBtn{
@@ -327,7 +340,7 @@
   }
 
   .locInfoPgsBtns{
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
   }
 
 
@@ -409,23 +422,23 @@
   }
 
   .locInfCardImg{
-    width: 14rem;
-    height: 14rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: 1rem;
   }
 
 
   
 .characterStatus{
-  height: 2.4rem;
-  width: 47%;
-  top: -17rem;
+  height:  1.4rem;
+  width: 54%;
+  top: -12rem;
 }
 
 .darkCharacterStatus{
-  height: 2.4rem;
-  width: 47%;
-  top:-17rem;
+  height: 1.4rem;
+  width: 54%;
+  top:-12rem;
 }
 
 .statFont{
@@ -448,6 +461,10 @@
 
   .characterContainer{
     padding-top: 9rem;
+  }
+
+  .characterFilter2{
+    width: 95%;
   }
 
   .charactersTitle1{
@@ -624,7 +641,7 @@
 .filtersImgs:hover{
   transition: .2s;
     transform: scale(1.1);
-    border: 1px solid var(--orange);
+    border: 5px solid var(--orange);
 }
 
   /* ================================================ Character Info ====================================================== */
