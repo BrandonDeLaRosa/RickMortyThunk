@@ -17,10 +17,12 @@ const Residents = ({url,darkMode}) => {
     return (
         <div className='locInfChaCardContainer'>
             <Link className='locInfChaCard' to={`/character/${resident.id}`}>
-                <img  className='locInfCardImg' src={resident.image} alt="" />
+                <div className='imgStatusDiv'>
+                    <img  className='locInfCardImg' src={resident.image} alt="" />
+                    <StatusLocationInfo resident={resident} darkMode={darkMode}/>
+                </div>
                 <h4 className={darkMode? 'darkLocInfCardNme' : 'locInfCardNme'}>  {resident.name}</h4>
             </Link>
-            <StatusLocationInfo resident={resident} darkMode={darkMode}/>
         </div>
     );
 };

@@ -226,12 +226,12 @@
 
 .characterStatus{
   background-color: var(--white) ;
-  height: 1.7rem;
+  height: 1.1rem;
   display: flex;
   align-items: center;
-  width: 55%;
+  width: 65%;
   position: relative;
-  top: -18rem;
+  top: -12rem;
   padding: 10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -239,12 +239,12 @@
 
 .darkCharacterStatus{
   background-color: var(--light-green) ;
-  height: 1.7rem;
+  height: 1.1rem;
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 65%;
   position: relative;
-  top:-18rem;
+  top:-12rem;
   padding:  10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -292,7 +292,7 @@
   width: 82%;
   position: relative;
   top: -13rem;
-  left: 0rem;
+  left: 10%;
   padding: 10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -306,7 +306,7 @@
   width: 82%;
   position: relative;
   top: -13rem;
-  left: 0rem;
+  left: 10%;
   padding: 10px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -810,6 +810,23 @@
     /* box-shadow: 0px 0px 3px 3px rgb(153, 205, 50); */
   }
 
+  .locInfList{
+    max-height: 340px;
+    overflow-y: scroll;
+    padding: 2rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: rgba(97, 180, 212, 0.336);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    width: 90%;
+  }
+
+  .imgStatusDiv{
+
+  }
+
   .locInfChaCard{
     display: flex;
     flex-direction: column;
@@ -819,21 +836,21 @@
   }
 
   .locInfCardImg{
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: 1rem;
   }
 
-  /* .locInfCardImg:{
-   
-  } */
+
 
   .locInfCardNme{
     color: var(--black);
+    margin-top: -2rem;
   }
 
   .darkLocInfCardNme{
     color: var(--white);
+    margin-top: -2rem;
   }
 
 /* ================================================== Character =========================================================== */
@@ -844,6 +861,7 @@
     align-items: center;
     padding-top: 6.2rem;
     background-image: url(./assets/ricks.png);
+    /* background-color: aqua; */
     /* background-repeat: no-repeat; */
   }
 
@@ -875,6 +893,9 @@
     padding: .2rem;
     margin-bottom: 1rem;
     margin-bottom: 2rem;
+  }
+  .characterBtns:focus{
+    color: white;
   }
 
   .characterBtns2{
@@ -949,6 +970,19 @@
   }
 
 /* ------------------------- Filters */
+
+.filtersListContainer{
+  background-color: rgba(97, 180, 212, 0.336);
+  border-radius: 1rem;
+  max-height: 390px;
+  width: 90%;
+  /* max-width: 450px; */
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
 
 .nameIdInp{
   padding: .3rem .5rem;
@@ -1047,6 +1081,8 @@
   text-decoration: none;
   margin-top: 2rem;
   width: 192px;
+  display: flex;
+  flex-direction: column;
 }
 
 .nICharacterName{
