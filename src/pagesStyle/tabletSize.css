@@ -164,7 +164,10 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 3rem;
+    /* height: 300px; */
+    /* max-height: 500px; */
   }
+
 
   .locInfCardImg{
     width: 12rem;

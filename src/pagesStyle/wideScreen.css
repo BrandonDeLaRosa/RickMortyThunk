@@ -55,6 +55,11 @@
       background-repeat: no-repeat;
     }
 
+    .homePageBtn{
+      width: 250px;
+      height: 100px;
+    }
+
       .homeInfo{
         padding: 4rem;
       }
@@ -257,23 +262,48 @@
  /* ================================================ Locations info ======================================================*/
 
  .locationInfoContainer{
+  height: 100vh;
   gap: 2rem;
   padding: 2rem;
 }
 
 .locInfoTitle1{
-  font-size: 70px;
+  font-weight: bold;
+  font-size: 65px;
+  position: absolute;
+  top: 8rem;
+  left: 1rem;
 }
 .locInfoTitle2{
   font-size: 55px;
+  /* background-color: aqua; */
+  margin-bottom: 2rem;
 }
 
 .locInfoText{
   font-size: 45px;
 }
 
+.locInfoData{
+  display: flex;
+  /* background-color: aqua; */
+}
+
+.locInfoText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid gray; */
+  padding: .5rem 3rem;
+  font-size: 45px;
+  font-weight: bold;
+}
+
   .locInfoBtns{
     gap: 8rem;
+    /* background-color: aqua; */
+    margin-top: 4rem;
   }
 
   .locInfoBtn{
@@ -338,7 +368,26 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 7rem;
+    max-height: 700px;
+    overflow-y: hidden;
     /* max-width: 1940px; */
+  }
+
+  
+  .locInfList::-webkit-scrollbar{
+    height: 15px;
+  }
+  .locInfList::-webkit-scrollbar-track{
+    background: #dee0e0;
+  }
+  .locInfList::-webkit-scrollbar-thumb{
+    background: orange;
+    border-radius: 5rem;
+  }
+
+  .locInfChaCard:hover{
+    box-shadow: 0px 0px 13px 4px var(--orange);
+    border-radius: 1rem;
   }
 
   .locInfCardNme{
@@ -350,35 +399,35 @@
   }
 
   .locInfCardImg{
-    width: 30rem;
-    height: 30rem;
+    width: 18rem;
+    height: 18rem;
     border-radius: 1rem;
   }
 
 
   
 .characterStatus{
-  height: 2.7rem;
-  width: 45%;
-  top: -34rem;
+  height: 2rem;
+  width: 60%;
+  top:  -18rem;
 }
 
 .darkCharacterStatus{
-  height: 2.7rem;
-  width: 45%;
-  top:-34rem;
+  height: 2rem;
+  width: 60%;
+  top: -18rem;
 }
 
 .statFont{
-  font-size: 30px;
+  font-size: 25px;
 }
 .darkStatFont{
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .status{
-  width: 35px;
-  height: 35px;
+  width: 20px;
+  height: 20px;
 }
 
 
@@ -389,18 +438,22 @@
     padding-top: 9rem;
   }
 
+  .characterFilter2{
+    width: 95%;
+  }
+
   .charactersTitle1{
-    font-size: 75px;
+    font-size: 60px;
   }
   .charactersTitle2{
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .charactersNameFilter{
-    font-size: 65px;
+    font-size: 60px;
   }
   .darkCharactersNameFilter{
-    font-size: 6px;
+    font-size: 60px;
   }
 
   .characterBtns2{
@@ -419,32 +472,45 @@
 
   .characterBtn{ 
     font-size: 40px;
-    /* cursor: pointer; */
+    cursor: pointer;
   }
 
   .darkCharacterBtn{ 
     font-size: 40px;
-    /* cursor: pointer; */
+    cursor: pointer;
   }
 
   .characterBtn:hover{ 
-    box-shadow: 0px 0px 13px 5px yellowgreen;
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
+    box-shadow: 0px 0px 13px 3px cyan;
+    color: var(--white);
   }
 
   .darkCharacterBtn:hover{ 
     box-shadow: 0px 0px 13px 5px yellowgreen;
+    color: var(--white);
+  }
+  .characterBtn:focus{ 
+    color: var(--white);
+  }
+
+  .nINameSearchBtn:hover{
+    box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
+  }
+  .nINameSearchBtn:focus{
+    color: var(--white);
   }
 
 /* ------------------------- Filters */
 
 .nameIdInp{
-  font-size: 50px;
+  font-size: 40px;
   width: 70rem;
 }
 
 
 .darkNameIdInp{
-    font-size: 50px;
+    font-size: 40px;
     width: 70rem;
 }
 .nameIdInp:focus{
@@ -470,14 +536,12 @@
   width: 14rem;
 }
 .nameIdBtn:hover{
-  box-shadow: 0px 0px 13px 5px yellowgreen;
+  box-shadow: 0px 0px 13px 5px rgb(50, 187, 205);
 }
 
 .darkNameIdBtn:hover{
   box-shadow: 0px 0px 13px 5px yellowgreen;
 }
-
-
 
 .NameIdBtnsCont{
     gap: 6rem;
@@ -489,24 +553,24 @@
 }
 
 .darkNINameSearchBtn{
-  font-size: 50px;
-  height: 5.5rem;
+  font-size: 30px;
+  height: 4rem;
   top: 4px;
-  margin-left: .3rem;
+  margin: 1rem 1rem 2rem 1rem;
 }
 
 .nINameSearchBtn{
-  font-size: 50px;
-  height: 5.5rem;
+  font-size: 30px;
+  height: 4rem;
   top: 4px;
-  margin-left: .3rem;
+  margin: 1rem 1rem 2rem 1rem;
 }
 .darkNINameSearchBtn:hover{
   box-shadow: 0px 0px 13px 5px yellowgreen;
 }
 
 .nINameSearchBtn:hover{
-  box-shadow: 0px 0px 13px 5px yellowgreen;
+  box-shadow: 0px 0px 13px 5px rgb(50, 187, 205)
 }
 
 
@@ -515,7 +579,19 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   gap: 2rem;
+   gap: 5rem;
+   overflow-y: hidden;
+}
+
+.filtersListContainer::-webkit-scrollbar{
+  height: 15px;
+}
+.filtersListContainer::-webkit-scrollbar-track{
+  background: #d1d1d1;
+}
+.filtersListContainer::-webkit-scrollbar-thumb{
+  background: orange;
+  border-radius: 5rem;
 }
 
 .darkNICharacterName{
@@ -541,34 +617,49 @@
     transform: scale(1.1);
     border: 5px solid var(--orange);
 }
+
+.filtersImgs:hover{
+  transition: .2s;
+    transform: scale(1.1);
+    border: 5px solid var(--orange);
+}
       /* ================================================ Character Info ====================================================== */
-    
-      .lCdata{
-        font-size: 30px;
+      
+      .characterInfoContainer{
+        background-repeat: repeat;
+        background-size: auto;
+        background-position-x: center;
       }
     
-      .darkCIData{
-        font-size: 30px;
+      .characterInfoTitle1{
+        font-size: 65px;
+        position: absolute;
+        left: 0;
+      }
+      .characterInfoTitle2{
+        font-size: 55px;
+        margin: 10rem 0rem 0rem;
       }
     
       .cIText{
-        font-size: 30px;
+        font-size: 50px;
       }
     
       .characterInfoData{
-        margin-right: 5rem;
+        margin-right: 9rem;
       }
     
       .characterInfoImg{
-        height: 390px;
-        width: 390px;
+        height: 520px;
+        width: 520px;
       }
     
       .characInfoBtnsCont{
         display: flex;
         position: absolute;
-        top: 28rem;
-        gap: 4rem;
+        top: 47rem;
+        gap: 5rem;
+        
       }
     
       .ipadSize{
@@ -577,31 +668,35 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        top: 3rem;
-        padding: 1rem;
+        top: 1rem;
+        padding: 0rem;
       }
     
       .statFont3{
         margin-top: .8rem;
-        font-size: 24px;
+        font-size: 30px;
       }
       .darkStatFont3{
         margin-top: .8rem;
-        font-size: 18px;
+        font-size: 30px;
       }
     
       .darkCharacterStatus3{
         height: 2.2rem;
-        width: 10rem;
-        top: -25rem;
-        left: -.5rem;
+        width: 15rem;
+        top: -33rem;
+        left: 0rem;
       }
      
       .characterStatus3{
         height: 2.2rem;
-        width: 10rem;
-        top: -25rem;
-        left: -.5rem;
+        width: 15rem;
+        top: -33rem;
+        left: 0rem;
+      }
+    
+      .characterInfoData{
+        text-align: left;
       }
     }
     

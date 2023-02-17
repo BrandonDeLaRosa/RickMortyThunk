@@ -148,9 +148,6 @@
     margin-left: .5rem;
   }
 
-
-
-
   .locIdRslt{
     font-size: 30px;
     font-weight: bold;
@@ -406,16 +403,17 @@
     gap: 4rem;
     max-width: 1940px;
     overflow-y: hidden;
+    /* max-height: 600px; */
   }
-
+  
   .locInfList::-webkit-scrollbar{
-    height: 8px;
+    height: 15px;
   }
   .locInfList::-webkit-scrollbar-track{
-    background-color: rgba(13, 31, 99, 0.651);
+    background: #dee0e0;
   }
   .locInfList::-webkit-scrollbar-thumb{
-    background: #d1d1d1;
+    background: orange;
     border-radius: 5rem;
   }
 
@@ -633,10 +631,10 @@
   height: 8px;
 }
 .filtersListContainer::-webkit-scrollbar-track{
-  background-color: rgba(13, 31, 99, 0.651);
+  background: #d1d1d1;
 }
 .filtersListContainer::-webkit-scrollbar-thumb{
-  background: #d1d1d1;
+  background: orange;
   border-radius: 5rem;
 }
 

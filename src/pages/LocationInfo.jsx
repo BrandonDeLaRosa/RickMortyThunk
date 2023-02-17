@@ -81,7 +81,7 @@ const LocationInfo = ({darkMode}) => {
                     prev
                 </button>
                 {numbers.map(number => (
-                    <button
+                    <button style={{background: number === page ? 'orange' : ''}}
                         key={number}
                         className={darkMode? 'darkPagesBtn' : 'pagesBtn'} onClick={() => setPage(number)}>
                         {number}

@@ -1,0 +1,136 @@
+.characterInfoContainer{
+    background-repeat: repeat;
+    background-size: auto;
+    background-position-x: center;
+  }
+
+  .characterInfoTitle1{
+    font-size: 45px;
+  }
+  .characterInfoTitle2{
+    font-size: 35px;
+  }
+
+  .cIText{
+    font-size: 30px;
+  }
+
+  .characterInfoData{
+    margin-right: 9rem;
+  }
+
+  .characterInfoImg{
+    height: 320px;
+    width: 320px;
+  }
+
+  .characInfoBtnsCont{
+    display: flex;
+    position: absolute;
+    top: 23rem;
+    gap: 4rem;
+  }
+
+  .ipadSize{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1rem;
+    padding: 0rem;
+  }
+
+  .statFont3{
+    margin-top: .8rem;
+    font-size: 22px;
+  }
+  .darkStatFont3{
+    margin-top: .8rem;
+    font-size: 22px;
+  }
+
+  .darkCharacterStatus3{
+    height: 2.2rem;
+    width: 10rem;
+    top: -20rem;
+    left: 0rem;
+  }
+ 
+  .characterStatus3{
+    height: 2.2rem;
+    width: 10rem;
+    top: -20rem;
+    left: 0rem;
+  }
+
+  .characterInfoData{
+    text-align: left;
+  }
+}
+
+
+
+
+    
+      .lCdata{
+        font-size: 60px;
+       
+      }
+    
+      .darkCIData{
+        font-size: 30px;
+      }
+    
+      .cIText{
+        font-size: 30px;
+      }
+    
+      .characterInfoData{
+        margin-right: 5rem;
+      }
+    
+      .characterInfoImg{
+        height: 390px;
+        width: 390px;
+      }
+    
+      .characInfoBtnsCont{
+        display: flex;
+        position: absolute;
+        top: 28rem;
+        gap: 4rem;
+      }
+    
+      .ipadSize{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 3rem;
+        padding: 1rem;
+      }
+    
+      .statFont3{
+        margin-top: .8rem;
+        font-size: 24px;
+      }
+      .darkStatFont3{
+        margin-top: .8rem;
+        font-size: 18px;
+      }
+    
+      .darkCharacterStatus3{
+        height: 2.2rem;
+        width: 10rem;
+        top: -25rem;
+        left: -.5rem;
+      }
+     
+      .characterStatus3{
+        height: 2.2rem;
+        width: 10rem;
+        top: -25rem;
+        left: -.5rem;
+      }
